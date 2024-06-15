@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="css\Borrador.css">-->
+    <link rel="stylesheet" href="css\estilos.css">
+    <link rel="stylesheet" href="css\normalize.css">
+    <script src="https://kit.fontawesome.com/bb2897d868.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>HouseM.D. Hub</title>
+</head> 
+<body>
+    <header>
+        <div >
+            <img class="logo" src="images\principal\logo.png" alt="Logo Dr.House">
+        </div>    
+        <!--<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa-solid fa-bars"></i></a>-->
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar"><i class="fa-solid fa-bars"></i></label>
+        
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li>
+                    <a id="op1">Sobre la Serie <i class="fa-solid fa-angle-down" style="font-size: 1rem;"></i></a>
+                    <ul class="menu-vertical">
+                        <li><a href="historia.html" id="op1-2">Historia</a></li>
+                        <li><a href="creadores.html">Creadores</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a >Personajes <i class="fa-solid fa-angle-down" style="font-size: 1rem;"></i></a>
+                    <ul class="menu-vertical">
+                        <li><a href="house.html">Dr. Gregory House</a></li>
+                        <li><a href="equipo.html">Equipo de Diagnostico</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="temporadas.html" >Temporadas</a></li>
+                <li>
+                    <a href="#">Detras del Diagnostico <i class="fa-solid fa-angle-down" style="font-size: 1rem;"></i></a>
+                    <ul class="menu-vertical">
+                        <li><a href="criticas.html">Criticas y Notas</a></li>
+                        <li><a href="anecdotas.html">Anecdotas</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="galeria.html" class="active" >Galeria</a></li>
+                <li><a href="Contacto" >Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+<script type="text/javascript">
+    window.onload = function(){
+        document.getElementById("op1").style.background='#F0F3F4';
+        document.getElementById("op1-2").style.background='#F0F3F4'
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css\lightbox.css">
+        <link rel="stylesheet" href="css\estilos.css">
+        <link rel="stylesheet" href="css\normalize.css">
+        <script src="https://kit.fontawesome.com/bb2897d868.js" crossorigin="anonymous"></script>
+        
+        <title>HouseM.D. Hub</title>
+</head>
+
+<body>
+    <header>
+        <div >
+            <img class="logo" src="images\principal\logo.png" alt="Logo Dr.House">
+        </div>    
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar"><i class="fa-solid fa-bars"></i></label>
+        
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html" >Inicio</a></li>
+                <li>
+                    <a >Sobre la Serie <i class="fa-solid fa-angle-down" style="font-size: 1rem;"></i></a>
+                    <ul class="menu-vertical">
+                        <li><a href="Historia.html" >Historia</a></li>
+                        <li><a href="Creadores.html" >Creadores</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a >Personajes <i class="fa-solid fa-angle-down" style="font-size: 1rem;"></i></a>
+                    <ul class="menu-vertical">
+                        <li><a href="Dr. Gregory House">Dr. Gregory House</a></li>
+                        <li><a href="Equipo de Diagnostico">Equipo de Diagnostico</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="Temporadas.html" >Temporadas</a></li>
+                <li>
+                    <a >Detras del Diagnostico <i class="fa-solid fa-angle-down" style="font-size: 1rem;"></i></a>
+                    <ul class="menu-vertical">
+                        <li><a href="Criticas y Notas">Criticas y Notas</a></li>
+                        <li><a href="Anecdotas">Anecdotas</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="Galeria.html" id="op5" >Galeria</a></li>
+                <li><a href="Contacto.html" >Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="galeria">
+            <a class="example-image-link" href="images\galeria\house-wilson.jpg" data-lightbox="example-set" data-title="House decide fingir su muerte para acompañar a Wilson en sus días con cáncer."><img class="example-image" src="images\galeria\house-wilson-mini.jpg" alt="Wilson con House en sus ultimos momentos"/></a>
+            <a class="example-image-link" href="images\galeria\hospital.jpg" data-lightbox="example-set" data-title="Hospital Princeton-Plainsboro, lugar donde transcurre la serie."><img class="example-image" src="images\galeria\hospital-mini.jpg" alt="Hospital Princeton-Plainsboro"/></a>
+            <a class="example-image-link" href="images\galeria\amber-muerte.jpg" data-lightbox="example-set" data-title="Wilson llorando por la muerte de Amber."><img class="example-image" src="images\galeria\amber-muerte-mini.jpg" alt="Wilson llorando la muerte de Amber"/></a>
+            <a class="example-image-link" href="images\galeria\equipo.jpg" data-lightbox="example-set" data-title="Todos los personajes con los que hará equipo Dr. House en el transcurso de la serie."><img class="example-image" src="images\galeria\equipo-mini.jpg" alt="Personajes de Dr.House"/></a>
+            <a class="example-image-link" href="images\galeria\house-accidente.jpg" data-lightbox="example-set" data-title="House intenta recordar los eventos de un accidente de autobús para salvar a un paciente."><img class="example-image" src="images\galeria\house-accidente-mini.jpg" alt="House en el accidente de autobus."/></a>
+            <a class="example-image-link" href="images\galeria\house-desintoxicacion.jpg" data-lightbox="example-set" data-title="House pasando por un momento de desintoxicación por su adicción al vicodin debido a su problema con la pierna."><img class="example-image" src="images\galeria\house-desintoxicacion-mini.jpg" alt="House desintoxicandose."/></a>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        window.onload = function(){
+            document.getElementById("op5").style.background='#F0F3F4';
+        }
+    </script>
+    <script src="js\lightbox-plus-jquery.min.js" rel="stylesheet" ></script>
+</body>
+</html>
