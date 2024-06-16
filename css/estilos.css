@@ -6,14 +6,20 @@
 	font-family: "Lato", sans-serif;
 	text-decoration: none;
 	text-transform: none;
+	
+	
 }
 
 body{
 	font-family:"Lato",sans-serif;
 	font-size:15px;
 	line-height:1.5;
-
+	background-image: url("drugs.jpg");	
+	bac
+	
 }
+
+
 /*--------------BARRA DE NAVEGACION----------------*/
 header
 {
@@ -21,12 +27,12 @@ header
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: azure;
+	background-color: white;
 	padding: 0px 7%;
 	display: flex;
 	align-items:center;
 	justify-content: space-between;
-	z-index: 1000;
+	z-index: 10;
 }
 
 header .nav ul
@@ -164,6 +170,8 @@ section{
 	position: relative;
   	text-align: center;
 	text-transform: none;
+	background-color: white;
+	margin-top: 150px;
 }
 .principal{
 	width: 100%;
@@ -173,12 +181,12 @@ section{
 	display:contents;
 	justify-content: center;
 	align-items: center;
-	color: #ffffff;
+	/* color: #ffffff;*/
 	
 }
 .principal div img{
 	width: 80%;
-	padding-top: 200px;
+	padding-top: 20px;
 }
 .secundario{
 	margin-top: 5%;
@@ -213,6 +221,12 @@ section{
 {
 	transform: scale(1.1);
 }
+.zoom
+{
+	transition: transform 0.3s ease;
+	transform: scale(1.1);
+}
+
 /*
 
 	width: 400px;
