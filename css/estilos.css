@@ -205,58 +205,67 @@ section{
 
 }
 .secundario{
-	display: flex;	
+	position: relative;
+    display: inline-flex;
+    overflow: hidden; /* Evita que el nombre del personaje se salga del contenedor */
+    margin: 10px;
+	text-align: center;
 }
 .secundario div
 {
 	width: 33%;
 	padding: 2%;
 	text-align: center;
+	
+
+}
+.personaje {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;  /*Evita que el nombre del personaje se salga del contenedor */
+    margin: 10px;
+	width: 400px;
+	height: 400px;
 }
 
-/*.secundario div img
-{
-	width: 100%;  ajusta la altura según sea necesario 
-  	background-size: cover;
-  	background-position: center;
-  	margin: 5px;
-	flex-wrap: wrap;	
-} */
-
-.secundario div img
-{
+.imagen-personaje {
 	width: 400px;
 	height: 400px;
 	object-fit: cover;
-	transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-.secundario div img:hover
-{
-	transform: scale(1.1);
-}
-.zoom
-{
-	transition: transform 0.3s ease;
-	transform: scale(1.1);
+.personaje:hover .imagen-personaje {
+    transform: scale(1.1); /* Efecto de mini zoom */
 }
 
-/*
 
-	width: 400px;
-	height: 400px;
-
-.secundario div{
-	width: 33%;
-	padding: 2%;
-	text-align: center;
+.nombre-personaje {
+	font-family:"Lato", sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.5s ease;
+	transition: transform 1.3s ease;
+	margin-top: 130px;
+	z-index: 2;
 }
-.secundario div a img{
-	width: 100%;
-	margin-bottom: 2rem;
-	border-radius:4px;
-	flex-wrap: wrap;
-}*/
+.personaje:hover .nombre-personaje {
+    opacity: 1; /* Mostrar el nombre al pasar el mouse */
+	transform: translate(-30%, -20%) ;
+	 
+}
+.nombre-personaje:hover, .nombre-personaje:not(:hover) {
+    transition: opacity 0.5s ease, transform 1.3s ease; /* Asegura que la transición se aplique también cuando se sale */
+}
 h4{
 	font-size: 1.5rem;
 	text-transform: uppercase;
