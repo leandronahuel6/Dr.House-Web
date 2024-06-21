@@ -205,47 +205,47 @@ section{
 
 }
 .secundario{
-	position: relative;
-    display: inline-flex;
-    overflow: hidden; /* Evita que el nombre del personaje se salga del contenedor */
-    margin: 10px;
-	text-align: center;
-}
-.secundario div
-{
-	width: 33%;
-	padding: 2%;
-	text-align: center;
+
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 60px;
 	
-
 }
+
 .personaje {
-    position: relative;
+    position: relative ;
     display: inline-block;
-    overflow: hidden;  /*Evita que el nombre del personaje se salga del contenedor */
-    margin: 10px;
-	width: 400px;
-	height: 400px;
 }
-
+.enlace-personaje {
+     /* Asegura que los elementos absolutos se posicionen correctamente */
+}
 .imagen-personaje {
-	width: 400px;
-	height: 400px;
-	object-fit: cover;
+	
+	border-radius: 10px;
+	width: 60%;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
     transition: transform 0.3s ease;
+	
 }
 
-.personaje:hover .imagen-personaje {
+.personaje:hover .imagen-personaje{
     transform: scale(1.1); /* Efecto de mini zoom */
 }
-
 
 .nombre-personaje {
 	font-family:"Lato", sans-serif;
 	font-style: italic;
 	font-weight: bold;
 	font-size: 20px;
-    position: absolute;
+	display:inline-block;
+    position:absolute;
     top: 50%;
     left: 50%;
     background-color: rgba(0, 0, 0, 0.8);
@@ -258,10 +258,9 @@ section{
 	margin-top: 130px;
 	z-index: 2;
 }
-.personaje:hover .nombre-personaje {
+.personaje:hover .nombre-personaje{
     opacity: 1; /* Mostrar el nombre al pasar el mouse */
-	transform: translate(-30%, -20%) ;
-	 
+	transform: translate(-30%, -20%) ; 
 }
 .nombre-personaje:hover, .nombre-personaje:not(:hover) {
     transition: opacity 0.5s ease, transform 1.3s ease; /* Asegura que la transición se aplique también cuando se sale */
@@ -284,6 +283,12 @@ h4{
 }
 
 /*---------------FORMULARIO---------------*/
+.img-form
+{
+	background-image: url("footer.jpg");
+	background-size: cover;
+	
+}
 .container-form
 {
 	width: 100%;
