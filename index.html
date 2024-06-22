@@ -53,7 +53,7 @@
                     </ul>
                 </li>
                 <li><a href="galeria.html" class="active" >Galeria</a></li>
-                <li><a href="Contacto" >Contacto</a></li>
+                <li><a href="#TPFORM" >Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -155,20 +155,24 @@
 </section>
 
     <!--Contacto-->
-    <section class="sect-principal img-form">
+    <section class="sect-principal img-form" id="TPFORM">
             <div class="main container-form" style="max-width:800px" id="contact">
                 <div class="info-form">
                         <h2 class="w3-wide">CONTACTO</h2>
-                        <p class="fotos-opacidad">¿Quiere hacer algún comentario en cuanto a nuestra página web?<br>
+                        <p>¿Quiere hacer algún comentario en cuanto a nuestra página web?<br>
                             ¡Todos sus mensajes son bienvenidos!<br>
                             ¡Complete el formulario y envíelo!!</p>
                 </div>
 
-                            <form action="/action_page.php" method="post" target="_blank">
+                            <form action="https://formsubmit.co/leandrodavalos15@gmail.com" method="post">
                                     <input class="campo" type="text" placeholder="Nombre" required name="Nombre">
                                     <input class="campo" type="text" placeholder="Email" required name="Email">   
                                     <textarea name="mensaje" placeholder="Ingresa tu mensaje"></textarea>                            
                                     <input class="btn-enviar" type="submit" name="Enviar" value="Enviar Mensaje">
+
+                                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/.">
+                                    <input type="hidden" name="_captcha" value="false">
+                                    
                             </form>
             </div>
     </section>
