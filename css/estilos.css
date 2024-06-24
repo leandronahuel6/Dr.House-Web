@@ -324,7 +324,12 @@ h4{
 
 .sub-tempo
 {
-	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 /*---------------CRITICAS Y NOTAS---------------*/
 
@@ -698,5 +703,26 @@ footer img{
 }
 .reviews {
 	margin-top: 10px;
+}
+/*---------TEMPORADAS-----------*/
+.sec-tempo {
+	width: 100%;
+	max-width: 100%; /* Ajusta el ancho máximo según sea necesario */
+	height: auto; /* Permite que la altura se ajuste automáticamente según el contenido */
+	background-color: white;
+	flex-direction: column; /* Cambia a dirección de columna para el contenido */
+}
+
+.sec-tempo img {
+	width: 100%;
+	height: auto; /* Ajusta la altura automáticamente */
+	opacity: 0.8;
+	transition: width 0.5s ease, opacity 0.5s ease;
+}
+
+.sec-tempo img:hover {
+	width: 100%; /* O ajusta según tu necesidad */
+	opacity: 1;
+	filter: contrast(110%);
 }
 }
