@@ -293,6 +293,40 @@ h4{
 {
 	display: flex;
 }
+/*---------------PERSONAJES---------------*/
+
+.persona
+{
+	width: 100%;
+    height: auto; /* Para mantener la proporción original de la imagen */
+    display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+.persona p
+{
+	text-align: center;
+	font-size: 5rem;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.persona ::before
+{
+ content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-size: cover;
+  filter: blur(10px); /* Ajusta el valor del desenfoque según sea necesario */
+  z-index: -1;
+}
+
+
+
 /*---------------TEMPORADAS---------------*/
 .sec-tempo
 {
