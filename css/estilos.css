@@ -303,33 +303,72 @@ h4{
 
 .persona
 {
+	/*
 	width: 100%;
-    height: auto; /* Para mantener la proporción original de la imagen */
-    display: block;
-	overflow: hidden;
+    position: relative;
+	margin-bottom: 20px;
+	*/
 	position: relative;
+    text-align: center;
+    overflow: hidden;
 }
 
-.persona p
+.persona img
 {
-	text-align: center;
+	width: 100%;
+    height: auto;
+    display: block;
+    z-index: -1;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+}
+.conte {
+    text-align: center;
+    color: white;
+}
+.tittle 
+{
 	font-size: 5rem;
-	color: white;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 }
 
-.persona ::before
+.subtitle
 {
- content: '';
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  background-size: cover;
-  filter: blur(10px); /* Ajusta el valor del desenfoque según sea necesario */
-  z-index: -1;
+	font-size: 3rem; 
+    margin-top: 10px; 
 }
+hr
+{
+	border: 0;
+    border-top: 3px solid white;
+    width: 50%;
+    margin: 10px auto 20px;
+}
+.descripcion
+{
+	max-width: 1300px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-top: auto;
+	position: relative;
+  	text-align: center;
+	text-transform: none;
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 10px;
+	
+}
+
+
 
 /*---------------VOLVER ARRIBA---------------*/
 .arriba
@@ -653,7 +692,7 @@ header .nav ul li a
 	padding-right: 30px;
 	padding-left: 10%;
 	padding-bottom: 8px;
-	background-color: azure;
+	background-color: white;
 
 }
 header .nav ul li ul
@@ -763,22 +802,63 @@ footer img{
 /*---------TEMPORADAS-----------*/
 .sec-tempo {
 	width: 100%;
-	max-width: 100%; /* Ajusta el ancho máximo según sea necesario */
-	height: auto; /* Permite que la altura se ajuste automáticamente según el contenido */
+	max-width: 100%; 
+	height: auto; 
 	background-color: white;
-	flex-direction: column; /* Cambia a dirección de columna para el contenido */
+	flex-direction: column; 
 }
 
 .sec-tempo img {
 	width: 100%;
-	height: auto; /* Ajusta la altura automáticamente */
+	height: auto; 
 	opacity: 0.8;
 	transition: width 0.5s ease, opacity 0.5s ease;
 }
 
 .sec-tempo img:hover {
-	width: 100%; /* O ajusta según tu necesidad */
+	width: 100%; 
 	opacity: 1;
 	filter: contrast(110%);
 }
+/*---------PERSONAJES-----------*/
+.titttle {
+	font-size: 3rem; 
 }
+.subtitle {
+	font-size: 2rem;
+}
+.descripcion
+{
+	max-width: calc(100% - 40px);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px; 
+        margin-top: 10px; 
+        padding: 10px;
+}
+/*---------FORMULARIO-----------*/
+.container-form {
+	grid-gap: 10px; 
+}
+
+.container-form h2 {
+	font-size: 25px; 
+}
+
+.container-form p {
+	font-size: 15px; 
+}
+
+form .campo,
+form textarea {
+	padding: 10px 6px; 
+	font-size: 13px; 
+}
+
+.btn-enviar {
+	padding: 10px; 
+	font-size: 13px; 
+}
+
+}
+
