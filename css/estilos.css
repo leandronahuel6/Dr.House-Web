@@ -238,7 +238,6 @@ a{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-	
 }
 
 .personaje {
@@ -313,11 +312,18 @@ h4{
 {	
 	border-radius: 20px;
 	float: left;
-	width:30%;
+	width:40%;
 	margin-right: 10px;
 	margin-left: 10px;
 }
-
+.img-right
+{
+	border-radius: 20px;
+	float: right;
+	width:60%;
+	margin-right: 10px;
+	margin-left: 10px;
+}
 .texto
 {
 	font-size: 20px;
@@ -482,14 +488,26 @@ hr
 	filter: contrast(110%);
 }
 
-.sub-tempo
+.tempo
 {
+	max-width: 1300px;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	position: relative;
+  	text-align: center;
+	text-transform: none;
+	background-color: white;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+.sub-tempo
+{
+	height: 100%;
+	padding-left: 0;
 	border-radius: 10px;
 	padding-bottom: 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
 }
 /*---------------CRITICAS Y NOTAS---------------*/
 
@@ -548,8 +566,7 @@ hr
     margin-bottom: 20px;
 }
 .client-comment p{
-    font-size: 0.9rem;
-    color: #4b4b4b;
+    color: black;
 	font-family: "Lato", sans-serif;
 	font-size: 20px;
 }
@@ -558,7 +575,68 @@ hr
     transition: all ease 0.3s;
 }
  
-
+.container-card{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.title-cards{
+	width: 100%;
+	max-width: 1080px;
+	margin: auto;
+	padding: 20px;
+	margin-top: 20px;
+	text-align: center;
+	color: #7a7a7a;
+}
+.card{
+	width: 30%;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.card:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+.card img{
+	width: auto;
+	height: 210px;
+}
+.card .contenido-card{
+	padding: 15px;
+	text-align: center;
+}
+.card .contenido-card h3{
+	margin-bottom: 15px;
+	color: #7a7a7a;
+}
+.card .contenido-card p{
+	color: black;
+	font-family: "Lato", sans-serif;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+.card .contenido-card a{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #2fb4cc;
+	border: 1px solid #2fb4cc;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+.card .contenido-card a:hover{
+	background: #2fb4cc;
+	color: #fff;
+}
 /*---------------FORMULARIO---------------*/
 .img-form
 {
@@ -805,11 +883,79 @@ header .nav ul li ul li ul
 	width: 100%;
 }
 
-.pie-pagina .grupo-1{
-	width: 90%;
-	grid-template-columns: repeat(1, 1fr);
-	grid-gap:30px;
-	padding: 35px 0px;
+.pie-pagina {
+	width: 100%;
+	background-color: white !important;
+	margin-top: 140px;
+}
+.pie-pagina .grupo-1,
+.pie-pagina .grupo-1 * {
+	background-color: white !important;
+}
+.pie-pagina .grupo-1 {
+	width: 100%;
+	max-width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px 0px;
+}
+.pie-pagina .grupo-1 .box {
+	width: 100%;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.pie-pagina .grupo-1 .box figure {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img {
+	width: 100%;
+	max-width: 250px;
+}
+.pie-pagina .grupo-1 .box h2 {
+	color: black;
+	margin-bottom: 15px;
+	font-size: 18px;
+}
+.pie-pagina .grupo-1 .box p {
+	color: black;
+	margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	visibility: visible !important;
+}
+.pie-pagina .grupo-1 .red-social a {
+	display: inline-block;
+	text-decoration: none;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	color: #fff;
+	margin: 5px;
+	background-color: #0d2033;
+	text-align: center;
+	transition: all 300ms ease;
+	visibility: visible !important;
+}
+.pie-pagina .grupo-1 .red-social a:hover {
+	color: aqua;
+}
+.pie-pagina .grupo-2 {
+	background-color: #0a1a2a !important;
+	padding: 10px 5px;
+	text-align: center;
+	color: #fff;
+}
+.pie-pagina .grupo-2 small {
+	font-size: 12px;
 }
 
 .icon {
@@ -928,12 +1074,6 @@ form textarea {
 	padding: 10px; 
 	font-size: 13px; 
 }
-
-
-
-
-
-
 
 
 }
