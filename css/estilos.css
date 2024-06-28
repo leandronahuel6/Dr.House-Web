@@ -219,8 +219,6 @@ a{
 	display:contents;
 	justify-content: center;
 	align-items: center;
-	/* color: #ffffff;*/
-	
 }
 .principal div img{
 	width: 100%;
@@ -316,13 +314,28 @@ h4{
 	margin-right: 10px;
 	margin-left: 10px;
 }
-.img-right
+.imagen-anecdota
 {
-	border-radius: 20px;
 	float: right;
-	width:60%;
-	margin-right: 10px;
-	margin-left: 10px;
+	width: 300px; /* Ajusta el ancho según tus necesidades */
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	
+}
+.imagen-anecdota-left
+{
+	float: left;
+	width: 300px; /* Ajusta el ancho según tus necesidades */
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover;
+	border-radius: 20px;
+	position: relative;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	padding-right: 10px;
 }
 .texto
 {
@@ -332,9 +345,11 @@ h4{
 	padding-right: 1rem;
 	text-align: left;
 }
+
 .contenedor
 {
-	display: flex;
+	display:inline-block;
+	align-items: center;
 }
 /*---------------DR HOUSE---------------*/
 .banner
@@ -376,6 +391,23 @@ video
 	height: 100%;
 	margin: 0;
 }
+
+.contenedor-imagen {
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    height: 200px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    position: relative;
+}
+
+.imagen-ajustada {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 100%; /* La imagen ocupa toda la altura del contenedor */
+    object-fit: cover; /* La imagen se ajusta para cubrir el contenedor */
+    object-position: 50% 50%; /* Ajusta la posición de la imagen para mostrar los ojos */
+	transform: scale(1.3); /* Escala la imagen al 120% de su tamaño original */
+	/*filter: grayscale(50%);  Aplica el efecto de blanco y negro */
+}
+
 /*---------------PERSONAJES---------------*/
 .persona
 {
