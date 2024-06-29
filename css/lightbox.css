@@ -54,7 +54,9 @@ a img {
 
   /* Background color behind image.
      This is visible during transitions. */
-  background-color: white;
+  background: url(/images/principal/meme.jpg);
+  
+
 }
 
 .lb-outerContainer:after {
