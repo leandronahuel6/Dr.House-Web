@@ -241,7 +241,6 @@ a{
 .personaje {
 	width:500px;
     padding: 20px;
-    margin: 15px;
     cursor: pointer;
 	position: relative;
 	object-fit: cover;
@@ -476,6 +475,7 @@ hr
 /*---------------VOLVER ARRIBA---------------*/
 .arriba
 {
+
 	position: fixed;
 	width: 50px;
 	height: 50px;
@@ -488,6 +488,8 @@ hr
 	line-height: 50px;
 	font-size: 26px;
 	border-radius: 20px;
+	border: 2px solid grey; /* Añade un borde de 2px de grosor y color negro */
+
 }
 
 
@@ -745,10 +747,7 @@ form .campo,textarea
   	text-align: center;
 	text-transform: none;
 	background-color: white;
-	margin-top: 100px;
-	padding: 50px 0;
-
-
+	padding: 10px 0;
 }
 .galeria
 {
@@ -767,14 +766,6 @@ form .campo,textarea
 {
 	filter: blur(1px);
 }
-
-/*
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-display: grid;
-*/
-
-
-
 
 /*---------------FOOTER---------------*/
 .pie-pagina{
@@ -838,6 +829,7 @@ display: grid;
 
 
 @media(max-width: 480px) { 
+
 header{
 	padding: 20px 10%;
 }
@@ -891,29 +883,47 @@ header .nav ul li ul li ul
 #menu-bar:not(:checked) ~ .nav {
     display: none;
 }
-/*---------------GALERIA---------------*/
-.container
-{
-	width: 100%;
-	min-height: 50vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 50px 8%;
-	margin-top: 5rem;
-}
-.galeria
-{
-	display: flex;
-	grid-gap: 30px;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	display: grid;
+/*---------------INICIO---------------*/
+
+.nombre-personaje {
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+    display: inline-block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    visibility: hidden; /* Inicialmente oculto */
+    transition: visibility 0s, opacity 0.5s ease, transform 1.3s ease;
+    z-index: 2;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }
 
-.galeria img
-{
-	width: 100%;
+.personaje:hover .nombre-personaje {
+    visibility: visible; /* Mostrar el nombre al pasar el mouse */
+    opacity: 1;
+    transform: translate(-50%, -20%);
 }
+
+/*---------------GALERIA---------------*/
+
+.galeria {
+    grid-template-columns: 1fr; 
+    padding: 10px; 
+    grid-gap: 10px; 
+  }
+  .galeria img {
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+	width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+	height: auto; /* Mantiene la proporción original */
+  }
 
 .pie-pagina {
 	width: 100%;
@@ -958,12 +968,14 @@ header .nav ul li ul li ul
 	color: black;
 	margin-bottom: 10px;
 }
+
 .pie-pagina .grupo-1 .red-social {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	visibility: visible !important;
 }
+
 .pie-pagina .grupo-1 .red-social a {
 	display: inline-block;
 	text-decoration: none;
@@ -989,7 +1001,10 @@ header .nav ul li ul li ul
 .pie-pagina .grupo-2 small {
 	font-size: 12px;
 }
-
+/*.pie-pagina .grupo-1 .red-social a:hover {
+        color: initial;  Cambia el color de hover a su valor inicial 
+        background-color: transparent;  Hace que el fondo sea transparente en hover 
+    } */
 .icon {
 	display: block;
 	padding-right: 0.6rem;
@@ -1019,7 +1034,7 @@ h2{
 	font-size: 1rem;
 }
 h4{
-	font-size: 1rem;
+	font-size: 1.6rem;
 }
 footer{
 	height: 80px;
@@ -1042,9 +1057,11 @@ footer img{
 }
 /*---------DR HOUSE-----------*/
 .banner h1 {
-	font-size: 8vw; /* Ajustar tamaño de fuente para pantallas pequeñas */
+	font-size: 70px; /* Reducir el tamaño de fuente para pantallas más pequeñas */
+	padding: 0px; /* Reducir el padding */
+	width: 100%; /* Ajustar el ancho del texto para pantallas más pequeñas */
+	top: 60%; /* Ajustar la posición vertical del texto */
 }
-
 
 /*---------TEMPORADAS-----------*/
 .sec-tempo {
@@ -1067,8 +1084,15 @@ footer img{
 	opacity: 1;
 	filter: contrast(110%);
 }
+.sub-tempo
+{
+	height: 100%;
+	padding-left: 0;
+	border-radius: 10px;
+	padding-bottom: 10px;
+}
 /*---------PERSONAJES-----------*/
-.titttle {
+.tittle {
 	font-size: 3rem; 
 }
 .subtitle {
