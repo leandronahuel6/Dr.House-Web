@@ -147,7 +147,8 @@ h2
 {
 	padding-top: 5px;
 	padding-bottom: 15px;
-	font-size: 20px;
+	font-size: 25px;
+	text-align: center;
 }
 .logo
 {
@@ -350,6 +351,67 @@ h4{
 	display:inline-block;
 	align-items: center;
 }
+/*---------------CREADORES---------------*/
+
+.contenedor-creadores {
+	margin-top: 20px;
+	display: flex;
+    justify-content: space-between; /* Alinea las imágenes con espacio entre ellas */
+    align-items: center; /* Centra verticalmente las imágenes */
+    flex-wrap: wrap; 
+}
+.imagen-contenedor
+{
+	width: 24%; /* Ajusta el ancho para mostrar cuatro imágenes en una fila */
+    position: relative; /* Permite posicionar el contenido */
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+	border-radius: 20px;
+}
+.imagen-contenedor img {
+	width: 100%; /* Asegura que la imagen ocupe todo el espacio disponible */
+   	height: 300px;/* Permite que la altura se ajuste automáticamente */
+    object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo la relación de aspecto */
+}
+.imagen-creador
+{
+	width: 25%;
+}
+.creador
+{
+	width: 70%; /* Ajusta el ancho para mostrar cuatro imágenes en una fila */
+    position: relative; /* Permite posicionar el contenido */
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+	border-radius: 20px;
+}
+.container-lista {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.lista {
+    width: calc(50% - 10px); /* Ancho de cada lista, ajustado para que quepan dos en una fila */
+    margin-bottom: 20px; /* Espacio entre las listas */
+}
+
+.lista h3 {
+    margin-top: 50px; /* Elimina el margen superior del título */
+}
+.lista ul
+{
+	padding-left: 20px;
+}
+.audio-creador
+{
+	margin-top: 100px;
+	margin-left: 40px;
+}
+.video-creador
+{
+	border-radius: 20px;
+	margin-left: 40px;
+	margin-top: 40px;
+}
 /*---------------DR HOUSE---------------*/
 .banner
 {
@@ -491,7 +553,6 @@ hr
 	border: 2px solid grey; /* Añade un borde de 2px de grosor y color negro */
 
 }
-
 
 /*---------------TEMPORADAS---------------*/
 .sec-tempo
@@ -790,7 +851,7 @@ form .campo,textarea
     align-items: center;
 }
 .pie-pagina .grupo-1 .box figure img{
-    width: 250px;
+    width: 200px;
 }
 .pie-pagina .grupo-1 .box h2{
     color: black;
@@ -825,8 +886,6 @@ form .campo,textarea
 .pie-pagina .grupo-2 small{
     font-size: 15px;
 }
-
-
 
 @media(max-width: 480px) { 
 
@@ -912,11 +971,10 @@ header .nav ul li ul li ul
 }
 
 /*---------------GALERIA---------------*/
-
 .galeria {
     grid-template-columns: 1fr; 
-    padding: 10px; 
-    grid-gap: 10px; 
+    padding: 30px; 
+    grid-gap: 12px; 
   }
   .galeria img {
 	border-radius: 10px;
@@ -925,6 +983,7 @@ header .nav ul li ul li ul
 	height: auto; /* Mantiene la proporción original */
   }
 
+/*---------------FOOTER---------------*/
 .pie-pagina {
 	width: 100%;
 	background-color: white !important;
@@ -982,16 +1041,14 @@ header .nav ul li ul li ul
 	width: 35px;
 	height: 35px;
 	line-height: 35px;
-	color: #fff;
+	color: black;
 	margin: 5px;
 	background-color: #0d2033;
 	text-align: center;
-	transition: all 300ms ease;
+	transition: none;
 	visibility: visible !important;
 }
-.pie-pagina .grupo-1 .red-social a:hover {
-	color: aqua;
-}
+
 .pie-pagina .grupo-2 {
 	background-color: #0a1a2a !important;
 	padding: 10px 5px;
@@ -1001,10 +1058,6 @@ header .nav ul li ul li ul
 .pie-pagina .grupo-2 small {
 	font-size: 12px;
 }
-/*.pie-pagina .grupo-1 .red-social a:hover {
-        color: initial;  Cambia el color de hover a su valor inicial 
-        background-color: transparent;  Hace que el fondo sea transparente en hover 
-    } */
 .icon {
 	display: block;
 	padding-right: 0.6rem;
@@ -1055,6 +1108,7 @@ footer img{
 .reviews {
 	margin-top: 10px;
 }
+
 /*---------DR HOUSE-----------*/
 .banner h1 {
 	font-size: 70px; /* Reducir el tamaño de fuente para pantallas más pequeñas */
@@ -1062,7 +1116,52 @@ footer img{
 	width: 100%; /* Ajustar el ancho del texto para pantallas más pequeñas */
 	top: 60%; /* Ajustar la posición vertical del texto */
 }
+/*---------CREADORES-----------*/
+.img-left {
+	width: 100%; /* Ajustamos para ocupar todo el ancho disponible */
+	float: none; /* Eliminamos el flotante para alinear verticalmente */
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 20px; /* Agregamos margen inferior para separación */
+}
+.contenedor-creadores {
+	flex-direction: column; /* Cambia a disposición de columna */
+	align-items: center; /* Centra horizontalmente los elementos */
+}
+.imagen-creador {
+	width: 100%; /* Ajustamos para ocupar todo el ancho disponible */
+	margin-bottom: 20px; /* Agregamos margen inferior para separación */
+}
+.imagen-contenedor,
+.creador,
+.audio-creador,
+.video-creador {
+	width: 100%; /* Ocupa todo el ancho disponible */
+	margin-bottom: 20px; /* Espacio entre los elementos */
+}
 
+.imagen-contenedor {
+	height: auto; /* Altura automática para adaptarse al contenido */
+}
+
+.lista {
+	width: 100%; /* Ocupa todo el ancho disponible */
+	margin-bottom: 20px; /* Espacio entre las listas */
+}
+
+.audio-creador,
+.video-creador {
+	margin-left: 0; /* Elimina el margen izquierdo */
+	margin-top: 20px; /* Ajusta el margen superior */
+}
+
+.lista h3 {
+	margin-top: 20px; /* Ajusta el margen superior del título */
+}
+
+.lista ul {
+	padding-left: 10px; /* Ajusta el padding izquierdo de la lista */
+}
 /*---------TEMPORADAS-----------*/
 .sec-tempo {
 	width: 100%;
@@ -1091,6 +1190,21 @@ footer img{
 	border-radius: 10px;
 	padding-bottom: 10px;
 }
+
+.imagen-anecdota,
+    .imagen-anecdota-left {
+        float: none; /* Eliminamos el flotante para alinear verticalmente */
+        width: 100%; /* Ajustamos para ocupar todo el ancho disponible */
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 20px; /* Agregamos margen inferior para separación */
+    }
+
+    .imagen-anecdota-left {
+        margin-left: 0;
+        padding-right: 0;
+        margin-right: 20px; /* Se ajusta el margen derecho solo para .imagen-anecdota en dispositivos móviles */
+    }
 /*---------PERSONAJES-----------*/
 .tittle {
 	font-size: 3rem; 
@@ -1130,7 +1244,33 @@ form textarea {
 	padding: 10px; 
 	font-size: 13px; 
 }
+/*---------CRITICAS-----------*/
+.card {
+	width: 100%; /* Cambia el ancho a 100% para ocupar toda la pantalla */
+	margin: 10px 0; /* Reduce el margen vertical */
+}
 
+.card img {
+	height: 180px; /* Ajusta la altura de la imagen */
+}
+
+.card .contenido-card {
+	padding: 10px; /* Reduce el padding del contenido */
+}
+
+.card .contenido-card h3 {
+	font-size: 16px; /* Reduce el tamaño del título */
+	margin-bottom: 10px;
+}
+
+.card .contenido-card p {
+	font-size: 16px; /* Reduce el tamaño del texto */
+}
+
+.card .contenido-card a {
+	padding: 8px; /* Reduce el padding del enlace */
+	font-size: 14px; /* Reduce el tamaño del texto del enlace */
+}
 
 }
 
