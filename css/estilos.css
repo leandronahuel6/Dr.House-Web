@@ -14,12 +14,11 @@ html
 	scroll-behavior: smooth;
 }
 
-
 body{
 	font-family:"Lato",sans-serif;
 	font-size:15px;
 	line-height:1.5;
-	background-image: url("drugs.jpg");	
+	background-image: url("/images/principal/drugs.jpg");	
 }
 
 
@@ -42,7 +41,6 @@ header .nav ul
 {
 	list-style: none;
 }
-
 header .nav ul li
 {
 	float: left;
@@ -83,23 +81,19 @@ header .nav ul li:hover>ul
 {
 	display: initial;
 } 
-
-#menu-bar,
-header label
+#menu-bar, header label
 {
 	cursor: pointer;
 	display: none;
 }
 
 /*----------------INICIO-----------------*/
-
 .carrusel {
 	width: 100%;
     height: auto;
 	margin:50px auto 0;
 	overflow: hidden;
 }
-
 .carrusel ul {
 	display: flex;
 	padding: 0;
@@ -107,14 +101,10 @@ header label
 	
 	animation: slide 20s infinite alternate ease-in-out;
 }
-
 .carrusel li {
 	width: 100%;
 	list-style: none;
 }
-
-
-
 @keyframes slide {
 	0% {margin-left: 0;}
 	20% {margin-left: 0;}
@@ -130,11 +120,10 @@ header label
 }
 
 /*----------------Primer Equipo-----------------*/
-
 h2
 {
 	font-size: 30px;
-	font-family:"Segoe UI",Arial,sans-serif;
+	font-family:"Lato",Arial,sans-serif;
 	font-weight:400;
 	margin:10px 0
 }
@@ -174,32 +163,24 @@ h2
 	-ms-transform: translate(-50%, -50%);
   }
 
-.justificado
-{
+.justificado{
 	text-align:justify;
 	
 }
-.main
-{
+.main{
 	padding-top:64px;
 	padding-bottom:64px;
 	text-align:center;
 }
-.borde
-{
-	border-radius:4px; /* Esto redondea las imganes */
+.borde{
+	border-radius:4px;
 }
-.margen-bottom
-{
+.margen-bottom{
 	margin-bottom:16px;
 }
-
-a{
-	text-decoration: none;
-	color: #000000;
+.icon { 
+	display: none;
 }
-.icon { display: none; }
-
 .sect-principal{
 	max-width: 1300px;
 	width: 100%;
@@ -238,7 +219,6 @@ a{
     align-items: center;
     flex-wrap: wrap;
 }
-
 .personaje {
 	width:500px;
     padding: 20px;
@@ -246,7 +226,6 @@ a{
 	position: relative;
 	object-fit: cover;
 }
-
 .imagen-personaje {
 	border-radius: 30px;
 	width: 80%;
@@ -255,12 +234,10 @@ a{
     transition: transform 0.3s ease;
 	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
 .imagen-personaje:hover {
     transform: scale(1.1); /* Efecto de mini zoom */
 	filter: contrast(130%);
 }
-
 .nombre-personaje {
 	font-family:"Lato", sans-serif;
 	font-style: italic;
@@ -296,6 +273,7 @@ h4{
 	font-size: 1.5rem;
 	text-decoration: underline;
 }
+
 /*---------------HISTORIA---------------*/
 .letra
 {
@@ -317,8 +295,8 @@ h4{
 .imagen-anecdota
 {
 	float: right;
-	width: 300px; /* Ajusta el ancho según tus necesidades */
-    height: 300px; /* Ajusta la altura según tus necesidades */
+	width: 300px; 
+    height: 300px; 
     object-fit: cover;
 	border-radius: 20px;
 	margin-bottom: 20px;
@@ -328,8 +306,8 @@ h4{
 .imagen-anecdota-left
 {
 	float: left;
-	width: 300px; /* Ajusta el ancho según tus necesidades */
-    height: 300px; /* Ajusta la altura según tus necesidades */
+	width: 300px; 
+    height: 300px; 
     object-fit: cover;
 	border-radius: 20px;
 	position: relative;
@@ -345,32 +323,31 @@ h4{
 	padding-right: 1rem;
 	text-align: left;
 }
-
 .contenedor
 {
 	display:inline-block;
 	align-items: center;
 }
-/*---------------CREADORES---------------*/
 
+/*---------------CREADORES---------------*/
 .contenedor-creadores {
 	margin-top: 20px;
 	display: flex;
-    justify-content: space-between; /* Alinea las imágenes con espacio entre ellas */
-    align-items: center; /* Centra verticalmente las imágenes */
+    justify-content: space-between; 
+    align-items: center; 
     flex-wrap: wrap; 
 }
 .imagen-contenedor
 {
-	width: 24%; /* Ajusta el ancho para mostrar cuatro imágenes en una fila */
-    position: relative; /* Permite posicionar el contenido */
-    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+	width: 24%; 
+    position: relative; 
+    overflow: hidden; 
 	border-radius: 20px;
 }
 .imagen-contenedor img {
-	width: 100%; /* Asegura que la imagen ocupe todo el espacio disponible */
-   	height: 300px;/* Permite que la altura se ajuste automáticamente */
-    object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo la relación de aspecto */
+	width: 100%; 
+   	height: 300px;
+    object-fit: cover; 
 }
 .imagen-creador
 {
@@ -378,9 +355,9 @@ h4{
 }
 .creador
 {
-	width: 70%; /* Ajusta el ancho para mostrar cuatro imágenes en una fila */
-    position: relative; /* Permite posicionar el contenido */
-    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+	width: 70%; 
+    position: relative; 
+    overflow: hidden; 
 	border-radius: 20px;
 }
 .container-lista {
@@ -388,14 +365,12 @@ h4{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 .lista {
-    width: calc(50% - 10px); /* Ancho de cada lista, ajustado para que quepan dos en una fila */
-    margin-bottom: 20px; /* Espacio entre las listas */
+    width: calc(50% - 10px); 
+    margin-bottom: 20px; 
 }
-
 .lista h3 {
-    margin-top: 50px; /* Elimina el margen superior del título */
+    margin-top: 50px; 
 }
 .lista ul
 {
@@ -421,7 +396,6 @@ h4{
 	height: 100vh;
 	overflow: hidden;
 }
-
 .video-house
 {
 	position: absolute;
@@ -431,7 +405,6 @@ h4{
 	height: 100%;
 	object-fit: cover;
 }
-
 .banner h1
 {
 
@@ -442,31 +415,30 @@ h4{
     font-family: "House M.D.", sans-serif;
     background: #000;
     color: #fff;
-    font-size: 210px; /* Tamaño de fuente adaptable al tamaño del viewport */
+    font-size: 210px; 
     font-weight: 400;
     mix-blend-mode: multiply;
     text-align: center;
     padding: 20px;
-    width: 100%; /* Ancho del texto ajustado para que no sobresalga */
+    width: 100%; 
     max-width: 100%;
 	height: 100%;
 	margin: 0;
 }
 
 .contenedor-imagen {
-    width: 100%; /* El contenedor ocupa todo el ancho disponible */
-    height: 200px; /* Ajusta la altura según tus necesidades */
-    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    width: 100%; 
+    height: 200px; 
+    overflow: hidden; 
     position: relative;
 }
 
 .imagen-ajustada {
-    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-    height: 100%; /* La imagen ocupa toda la altura del contenedor */
-    object-fit: cover; /* La imagen se ajusta para cubrir el contenedor */
-    object-position: 50% 50%; /* Ajusta la posición de la imagen para mostrar los ojos */
-	transform: scale(1.3); /* Escala la imagen al 120% de su tamaño original */
-	/*filter: grayscale(50%);  Aplica el efecto de blanco y negro */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: 50% 50%; 
+	transform: scale(1.3); 
 }
 
 /*---------------PERSONAJES---------------*/
@@ -476,7 +448,6 @@ h4{
     text-align: center;
     overflow: hidden;
 }
-
 .persona img
 {
 	width: 100%;
@@ -499,18 +470,14 @@ h4{
     text-align: center;
     color: white;
 }
-.tittle 
-{
+.tittle {
 	font-size: 5rem;
 }
-
-.subtitle
-{
+.subtitle{
 	font-size: 3rem; 
     margin-top: 10px; 
 }
-hr
-{
+hr{
 	border: 0;
     border-top: 3px solid white;
     width: 50%;
@@ -528,15 +495,11 @@ hr
   	text-align: center;
 	text-transform: none;
 	background-color: rgba(255, 255, 255, 1);
-	border-radius: 10px;
-	
+	border-radius: 10px;	
 }
 
-
-
 /*---------------VOLVER ARRIBA---------------*/
-.arriba
-{
+.arriba{
 
 	position: fixed;
 	width: 50px;
@@ -555,8 +518,7 @@ hr
 }
 
 /*---------------TEMPORADAS---------------*/
-.sec-tempo
-{
+.sec-tempo{
 	
 	width: 100%;
 	margin-left: auto;
@@ -567,24 +529,19 @@ hr
 	background-color: white;
     
 }
-.sec-tempo img
-{
+.sec-tempo img{
 	width: 0px;
     flex-grow: 1;
     object-fit: cover;
     opacity: 0.8;
     transition: width 0.5s ease, opacity 0.5s ease;
 }
-
-.sec-tempo img:hover
-{
+.sec-tempo img:hover{
 	width: 200px;
 	opacity: 1;
 	filter: contrast(110%);
 }
-
-.tempo
-{
+.tempo{
 	max-width: 1300px;
 	width: 100%;
 	margin-left: auto;
@@ -596,16 +553,14 @@ hr
 	margin-top: 10px;
 	border-radius: 10px;
 }
-
-.sub-tempo
-{
+.sub-tempo{
 	height: 100%;
 	padding-left: 0;
 	border-radius: 10px;
 	padding-bottom: 10px;
 }
-/*---------------CRITICAS Y NOTAS---------------*/
 
+/*---------------CRITICAS Y NOTAS---------------*/
 .testimonial-box-container{
     display: flex;
     justify-content: center;
@@ -615,7 +570,7 @@ hr
 }
 .testimonial-box{
     width:500px;
-    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.4);
     background-color: #ffffff;
     padding: 20px;
     margin: 15px;
@@ -669,7 +624,6 @@ hr
     transform: translateY(-10px);
     transition: all ease 0.3s;
 }
- 
 .container-card{
 	display: flex;
     justify-content: center;
@@ -732,14 +686,13 @@ hr
 	background: #2fb4cc;
 	color: #fff;
 }
+
 /*---------------FORMULARIO---------------*/
-.img-form
-{
-	background-image: url(/images/principal/form.jpg);
+.img-form{
+	background-image: url("/images/principal/form.jpg");
 	background-size: cover;
 }
-.container-form
-{
+.container-form{
 	width: 100%;
 	max-width: 1100px;
 	margin: auto;
@@ -748,22 +701,18 @@ hr
 	grid-gap: 50px;
 	margin-top: 90px;
 }
-.container-form h2
-{
+.container-form h2{
 	margin-bottom: 15px;
 	font-size: 35px;
 }
-.container-form p
-{
+.container-form p{
 	font-size: 17px;
 	line-height: 1.6;
 	margin-bottom: 30px;
 	text-transform:none;
 	color: black;
 }
-
-form .campo,textarea
-{
+form .campo,textarea{
 	width: 100%;
 	padding: 15px 10px;
 	font-size: 15px;
@@ -772,9 +721,7 @@ form .campo,textarea
 	border-radius: 3px;
 	outline: 0px;
 }
-
-.btn-enviar
-{
+.btn-enviar{
 	padding: 15px;
 	font-size: 16px;
 	border: none;
@@ -785,21 +732,18 @@ form .campo,textarea
 	cursor: pointer;
 	transition: all 300ms ease;
 }
-
-.btn-enviar:hover
-{
+.btn-enviar:hover{
 	background: grey;
 }
+
 /*---------------GALERIA---------------*/
-.letra-galeria
-{
+.letra-galeria{
 	font-family: "House M.D.";
 	justify-content: center;
 	align-items: center;
 	font-size: 50px;
 }
-.container
-{
+.container{
 	max-width: 1300px;
 	min-height: 60vh;
 	width: 100%;
@@ -810,21 +754,18 @@ form .campo,textarea
 	background-color: white;
 	padding: 10px 0;
 }
-.galeria
-{
+.galeria{
 	padding-left: 20px;
 	padding-right: 20px;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
 	grid-gap: 20px;	
 }
-.galeria img
-{
+.galeria img{
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
-.galeria a:hover img
-{
+.galeria a:hover img{
 	filter: blur(1px);
 }
 
@@ -892,12 +833,10 @@ form .campo,textarea
 header{
 	padding: 20px 10%;
 }
-header label
-{
+header label{
 	display: initial;
 }
-header .nav
-{
+header .nav{
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -905,13 +844,10 @@ header .nav
 	border-top: 1px solid rgba(1, 1, 1, .1);
 	display: none;
 }
-
-header .nav ul li
-{
+header .nav ul li{
 	width: 100%;
 }
-header .nav ul li a
-{
+header .nav ul li a{
 	padding-top: 8px;
 	padding-right: 30px;
 	padding-left: 10%;
@@ -919,24 +855,20 @@ header .nav ul li a
 	background-color: white;
 
 }
-header .nav ul li ul
-{
+header .nav ul li ul{
 	position: relative;
 	width: 100%;
 	left: 0;
 	
 }
-header .nav ul li ul li
-{
+header .nav ul li ul li{
 	background-color: black;
 }
-header .nav ul li ul li ul
-{
+header .nav ul li ul li ul{
 	width: 100%;
 	left: 0;
 }
-#menu-bar:checked ~ .nav
-{
+#menu-bar:checked ~ .nav{
 	display: block;
 }
 #menu-bar:not(:checked) ~ .nav {
@@ -963,7 +895,6 @@ header .nav ul li ul li ul
     transform: translateX(-50%);
     white-space: nowrap;
 }
-
 .personaje:hover .nombre-personaje {
     visibility: visible; /* Mostrar el nombre al pasar el mouse */
     opacity: 1;
@@ -976,7 +907,7 @@ header .nav ul li ul li ul
     padding: 30px; 
     grid-gap: 12px; 
   }
-  .galeria img {
+.galeria img {
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 	width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
@@ -1027,14 +958,12 @@ header .nav ul li ul li ul
 	color: black;
 	margin-bottom: 10px;
 }
-
 .pie-pagina .grupo-1 .red-social {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	visibility: visible !important;
 }
-
 .pie-pagina .grupo-1 .red-social a {
 	display: inline-block;
 	text-decoration: none;
@@ -1048,7 +977,6 @@ header .nav ul li ul li ul
 	transition: none;
 	visibility: visible !important;
 }
-
 .pie-pagina .grupo-2 {
 	background-color: #0a1a2a !important;
 	padding: 10px 5px;
@@ -1084,7 +1012,7 @@ header .nav ul li ul li ul
 	margin-bottom: 1rem;
 }
 h2{
-	font-size: 1rem;
+	font-size: 2rem;
 }
 h4{
 	font-size: 1.6rem;
@@ -1096,11 +1024,9 @@ footer img{
 	max-width: 1.5rem;
 }
 .testimonial-box {
-	/* Estilo específico para 480px */
 	width: 100%;
-	padding: 10px; /* Ajusta el padding según necesidades */
+	padding: 10px;
 }
-
 .box-top {
 	flex-wrap: wrap;
 	margin-bottom: 10px;
@@ -1108,61 +1034,52 @@ footer img{
 .reviews {
 	margin-top: 10px;
 }
-
 /*---------DR HOUSE-----------*/
 .banner h1 {
-	font-size: 70px; /* Reducir el tamaño de fuente para pantallas más pequeñas */
-	padding: 0px; /* Reducir el padding */
-	width: 100%; /* Ajustar el ancho del texto para pantallas más pequeñas */
-	top: 60%; /* Ajustar la posición vertical del texto */
+	font-size: 70px; 
+	padding: 0px; 
+	width: 100%; 
+	top: 60%; 
 }
 /*---------CREADORES-----------*/
 .img-left {
-	width: 100%; /* Ajustamos para ocupar todo el ancho disponible */
+	width: 100%; 
 	float: none; /* Eliminamos el flotante para alinear verticalmente */
 	margin-right: 0;
 	margin-left: 0;
-	margin-bottom: 20px; /* Agregamos margen inferior para separación */
+	margin-bottom: 20px; 
 }
 .contenedor-creadores {
 	flex-direction: column; /* Cambia a disposición de columna */
 	align-items: center; /* Centra horizontalmente los elementos */
 }
 .imagen-creador {
-	width: 100%; /* Ajustamos para ocupar todo el ancho disponible */
-	margin-bottom: 20px; /* Agregamos margen inferior para separación */
+	width: 100%; 
+	margin-bottom: 20px; 
 }
-.imagen-contenedor,
-.creador,
-.audio-creador,
-.video-creador {
-	width: 100%; /* Ocupa todo el ancho disponible */
-	margin-bottom: 20px; /* Espacio entre los elementos */
+.imagen-contenedor, .creador, .audio-creador, .video-creador {
+	width: 100%; 
+	margin-bottom: 20px; 
 }
-
 .imagen-contenedor {
-	height: auto; /* Altura automática para adaptarse al contenido */
+	height: auto; 
 }
-
 .lista {
-	width: 100%; /* Ocupa todo el ancho disponible */
-	margin-bottom: 20px; /* Espacio entre las listas */
+	width: 100%; 
+	margin-bottom: 20px;
 }
-
-.audio-creador,
-.video-creador {
-	margin-left: 0; /* Elimina el margen izquierdo */
-	margin-top: 20px; /* Ajusta el margen superior */
+.audio-creador, .video-creador {
+	margin-left: 0; 
+	margin-top: 20px;
 }
-
 .lista h3 {
-	margin-top: 20px; /* Ajusta el margen superior del título */
+	margin-top: 20px; 
+}
+.lista ul {
+	padding-left: 10px; 
 }
 
-.lista ul {
-	padding-left: 10px; /* Ajusta el padding izquierdo de la lista */
-}
-/*---------TEMPORADAS-----------*/
+/*---------------TEMPORADAS----------------*/
 .sec-tempo {
 	width: 100%;
 	max-width: 100%; 
@@ -1170,14 +1087,12 @@ footer img{
 	background-color: white;
 	flex-direction: column; 
 }
-
 .sec-tempo img {
 	width: 100%;
 	height: auto; 
 	opacity: 0.8;
 	transition: width 0.5s ease, opacity 0.5s ease;
 }
-
 .sec-tempo img:hover {
 	width: 100%; 
 	opacity: 1;
@@ -1190,86 +1105,74 @@ footer img{
 	border-radius: 10px;
 	padding-bottom: 10px;
 }
+.imagen-anecdota, .imagen-anecdota-left {
+    float: none; /* Eliminamos el flotante para alinear verticalmente */
+    width: 100%; 
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 20px; 
+}
+.imagen-anecdota-left {
+    margin-left: 0;
+    padding-right: 0;
+    margin-right: 20px; 
+}
 
-.imagen-anecdota,
-    .imagen-anecdota-left {
-        float: none; /* Eliminamos el flotante para alinear verticalmente */
-        width: 100%; /* Ajustamos para ocupar todo el ancho disponible */
-        margin-right: 0;
-        margin-left: 0;
-        margin-bottom: 20px; /* Agregamos margen inferior para separación */
-    }
-
-    .imagen-anecdota-left {
-        margin-left: 0;
-        padding-right: 0;
-        margin-right: 20px; /* Se ajusta el margen derecho solo para .imagen-anecdota en dispositivos móviles */
-    }
-/*---------PERSONAJES-----------*/
+/*------------------PERSONAJES--------------------*/
 .tittle {
 	font-size: 3rem; 
 }
 .subtitle {
 	font-size: 2rem;
 }
-.descripcion
-{
-		max-width: calc(100% - 40px);
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 10px; 
-        margin-top: 10px; 
-        padding: 10px;
+.descripcion{
+	max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px; 
+    margin-top: 10px; 
+    padding: 10px;
 }
-/*---------FORMULARIO-----------*/
+
+/*------------------FORMULARIO---------------------*/
 .container-form {
 	grid-gap: 10px; 
 }
-
 .container-form h2 {
 	font-size: 25px; 
 }
-
 .container-form p {
 	font-size: 15px; 
 }
-
-form .campo,
-form textarea {
+form .campo, form textarea {
 	padding: 10px 6px; 
 	font-size: 13px; 
 }
-
 .btn-enviar {
 	padding: 10px; 
 	font-size: 13px; 
 }
-/*---------CRITICAS-----------*/
+/*------------------CRITICAS------------------------*/
 .card {
-	width: 100%; /* Cambia el ancho a 100% para ocupar toda la pantalla */
-	margin: 10px 0; /* Reduce el margen vertical */
+	width: 100%; 
+	margin: 10px 0; 
 }
-
 .card img {
-	height: 180px; /* Ajusta la altura de la imagen */
+	height: 180px; 
 }
-
 .card .contenido-card {
-	padding: 10px; /* Reduce el padding del contenido */
+	padding: 10px; 
 }
-
 .card .contenido-card h3 {
-	font-size: 16px; /* Reduce el tamaño del título */
+	font-size: 16px; 
 	margin-bottom: 10px;
 }
-
 .card .contenido-card p {
-	font-size: 16px; /* Reduce el tamaño del texto */
+	font-size: 16px; 
 }
-
 .card .contenido-card a {
-	padding: 8px; /* Reduce el padding del enlace */
-	font-size: 14px; /* Reduce el tamaño del texto del enlace */
+	padding: 8px; 
+	font-size: 14px; 
 }
 
 }
