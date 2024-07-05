@@ -689,7 +689,7 @@ hr{
 
 /*---------------FORMULARIO---------------*/
 .img-form{
-	background-image: url("/images/principal/form.jpg");
+	background-image: url(/css/form.jpg);
 	background-size: cover;
 }
 .container-form{
