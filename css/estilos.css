@@ -6,8 +6,6 @@
 	font-family: "Lato", sans-serif;
 	text-decoration: none;
 	text-transform: none;
-	
-	
 }
 html
 {
@@ -23,6 +21,10 @@ body{
 
 
 /*--------------BARRA DE NAVEGACION----------------*/
+a{
+	text-decoration: none;
+	color: #000000;
+}
 header
 {
 	position: fixed;
@@ -500,7 +502,6 @@ hr{
 
 /*---------------VOLVER ARRIBA---------------*/
 .arriba{
-
 	position: fixed;
 	width: 50px;
 	height: 50px;
@@ -514,7 +515,6 @@ hr{
 	font-size: 26px;
 	border-radius: 20px;
 	border: 2px solid grey; /* Añade un borde de 2px de grosor y color negro */
-
 }
 
 /*---------------TEMPORADAS---------------*/
