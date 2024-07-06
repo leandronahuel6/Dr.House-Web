@@ -16,7 +16,7 @@ body{
 	font-family:"Lato",sans-serif;
 	font-size:15px;
 	line-height:1.5;
-	background-image: url(/css/drugs.jpg);	
+	background-image: url("/images/principal/drugs.jpg");	
 }
 
 
@@ -689,7 +689,7 @@ hr{
 
 /*---------------FORMULARIO---------------*/
 .img-form{
-	background-image: url(/css/form.jpg);
+	background-image: url("/images/principal/form.jpg");
 	background-size: cover;
 }
 .container-form{
