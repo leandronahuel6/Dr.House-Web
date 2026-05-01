@@ -19,7 +19,9 @@
     
     <header>
         <div>
-                <a href="index.html"><img class="logo" src="images\principal\logo.png" alt="Logo Dr.House"></a>
+            <a href="index.html" class="logo-house">
+            <span class="caja-h">H</span>OUSE <span class="md">M.D.</span>
+            </a>
         </div>    
         
         <input type="checkbox" id="menu-bar">
@@ -59,16 +61,12 @@
     </header>
     
 <section class="sect-principal">
-        <article class="principal">
-            <div class="carrusel">
-                <ul>
-                    <li><img class="borde" src="images\principal\Principal1.jpg" alt="Dr.House"></li>
-                    <li><img class="borde" src="images\principal\Principal2.jpg" alt="Dr.House"></li>
-                    <li><img class="borde" src="images\principal\Principal3.jpg" alt="Dr.House"></li>
-                    <li><img class="borde" src="images\principal\Principal4.jpg" alt="Dr.House"></li>
-                </ul>
+        <section class="hero-diagnostico">
+            <div class="hero-contenido">
+                <h1 class="w3-wide" style="font-size: 60px; color: #0A1A2A;">House M.D.</h1>
+                <p class="sub-titulo texto-maquina">Diagnóstico: Brillantez y Sarcasmo.</p>
             </div>
-        </article>
+        </section>
         <!--Primer equipo-->
             <h1 class="w3-wide" style="font-size: 50px;">House D.M.</h1>
             <p class="sub-titulo fotos-opacidad"><i>Los Pioneros del Diagnóstico</i></p>
@@ -97,14 +95,20 @@
                <div class="personaje">
                 <a href="equipo.html#TP1">
                     <p class="nombre-personaje">Dra. Allison Cameron</p>
-                    <img src="images\principal\Cameron.jpg" class="imagen-personaje" alt="dr.Cameron" >
+                    <img src="images\principal\Cameron.webp" class="imagen-personaje" alt="dr.Cameron" >
                 </a>
             </div>
         </article>
     </div>
 </section>
 
-    <section class="sect-principal">
+<div class="ecg-divider">
+    <svg viewBox="0 0 1000 150" preserveAspectRatio="none">
+        <path d="M0,75 L400,75 L430,20 L470,130 L500,75 L1000,75" fill="none" stroke="#2FB4CC" stroke-width="4"></path>
+    </svg>
+</div>
+
+<section class="sect-principal">
     <!--Segundo equipo-->
     <h2 class="w3-wide" style="padding-top: 40px;">House D.M.: La Nueva Generación</h2>
     <p class="sub-titulo fotos-opacidad"><i>Los innvodores del Diagnóstico</i></p>
@@ -131,14 +135,14 @@
             <div class="personaje">
                 <a href="equipo.html#TP6">
                     <p class="nombre-personaje">Dr. Lawrence Kutner</p>
-                    <img src="images/principal/kutner.jpg" class="imagen-personaje" alt="Dr. Lawrence Kutner " >
+                    <img src="images/principal/kutner.webp" class="imagen-personaje" alt="Dr. Lawrence Kutner " >
                 </a>
             </div>
         
             <div class="personaje">
                 <a href="equipo.html#TP7">
                     <p class="nombre-personaje">Dr. Remy Hadley</p>
-                    <img src="images\principal\Trece.jpg" class="imagen-personaje" alt="Dr. Remy Hadley" >
+                    <img src="images\principal\Trece.webp" class="imagen-personaje" alt="Dr. Remy Hadley" >
                 </a>
             </div>
             <div class="personaje">
@@ -239,6 +243,7 @@
         
       </script>   
       
-      
+      <script src="js/main.js"></script>
+
 </body>
 </html>

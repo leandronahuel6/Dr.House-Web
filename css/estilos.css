@@ -12,115 +12,202 @@ html
 	scroll-behavior: smooth;
 }
 
-body{
-	font-family:"Lato",sans-serif;
-	font-size:15px;
-	line-height:1.5;
-	background-image: url("../css/drugs.jpg");	
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    background-color: #F8F9FA; /* Blanco clínico */
+    /* Patrón de cuadrícula médica muy sutil */
+    background-image: 
+        linear-gradient(rgba(47, 180, 204, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47, 180, 204, 0.05) 1px, transparent 1px);
+    background-size: 25px 25px;
+    color: #333;
 }
-
 
 /*--------------BARRA DE NAVEGACION----------------*/
-a{
-	text-decoration: none;
-	color: #000000;
-}
-header
-{
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	background-color: white;
-	padding: 0px 7%;
-	display: flex;
-	align-items:center;
-	justify-content:space-between;
-	z-index:10;
-	
-}
-header .nav ul
-{
-	list-style: none;
-}
-header .nav ul li
-{
-	float: left;
-	position: relative;
-}
-header .nav ul li a
-{
-	font-size: 20px;
-	text-decoration: none;
-	padding: 20px;
-	display: block;
-	transition: all .2s ease;
-}
-header .nav ul li a:hover
-{
-	background-color: #ccc;
-}
-header .nav ul li ul
-{
-	position: absolute;
-	right: 0px;
-	display: none;
-	width: 200px;
-	background-color: white;
-}
-header .nav ul li ul li a
-{
-	font-size: 15px;
-	text-transform: capitalize;
-	
-}
-header nav ul li ul li
-{
-	width: 100%;
-}
-header .nav ul li:focus-within > ul, 
-header .nav ul li:hover>ul
-{
-	display: initial;
-} 
-#menu-bar, header label
-{
-	cursor: pointer;
-	display: none;
+/*--------------BARRA DE NAVEGACION PREMIUM----------------*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.98); /* Blanco casi sólido */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Sombra elegante */
+    border-bottom: 2px solid #0A1A2A; /* Línea de base corporativa */
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
 }
 
+/* --- LOGO REPLICADO DE LA SERIE --- */
+.logo-house {
+    font-family: "Lato", sans-serif;
+    font-size: 32px;
+    font-weight: 900; /* Letra muy gruesa */
+    color: #0A1A2A;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.logo-house .caja-h {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #0A1A2A; /* La caja característica de la H */
+    padding: 0px 8px;
+    margin-right: 4px;
+    height: 40px;
+}
+
+.logo-house .md {
+    font-weight: 400; /* Más fino */
+    font-size: 18px;
+    margin-left: 8px;
+    text-decoration: underline; /* El subrayado médico */
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    color: #555;
+}
+
+.logo-house:hover {
+    color: #2FB4CC; /* Efecto hover */
+}
+.logo-house:hover .caja-h {
+    border-color: #2FB4CC;
+}
+
+header .nav ul {
+    list-style: none;
+    display: flex; /* Mejor alineación horizontal */
+    margin: 0;
+    padding: 0;
+}
+
+header .nav ul li {
+    position: relative;
+}
+
+header .nav ul li a {
+    color: #0A1A2A; /* Color azul muy oscuro */
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 30px 20px; /* Más espacio vertical para el menú */
+    display: block;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+/* Efecto hover: Línea animada inferior en lugar de fondo gris */
+header .nav ul li a:hover {
+    background-color: transparent; 
+    color: #2FB4CC; /* Color de acento cian */
+}
+
+header .nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #2FB4CC;
+    transition: width 0.3s ease;
+}
+
+header .nav ul li a:hover::after,
+header .nav ul li a.active::after {
+    width: 100%; /* La línea crece de izquierda a derecha */
+}
+
+/* -- DISEÑO DE LOS SUBMENÚS (Menú desplegable) -- */
+header .nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 220px;
+    background-color: #0A1A2A; /* Fondo oscuro para el submenú */
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    /* Animación de fade-in en lugar de salto brusco */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+    display: block; 
+}
+
+/* Mostrar el submenú suavemente */
+header .nav ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Ítems dentro del submenú */
+header .nav ul li ul li {
+    width: 100%;
+}
+
+header .nav ul li ul li a {
+    color: #FFFFFF; /* Letra blanca sobre fondo oscuro */
+    padding: 15px 20px;
+    font-size: 14px;
+    text-transform: none; /* Letra normal para mejor legibilidad */
+    font-weight: 400;
+    border-bottom: 1px solid rgba(255,255,255,0.05); /* Separador muy sutil */
+}
+
+header .nav ul li ul li a:hover {
+    background-color: rgba(47, 180, 204, 0.1); /* Fondo sutil cian al pasar el ratón */
+    color: #2FB4CC;
+    padding-left: 25px; /* Pequeño empuje del texto a la derecha para dar dinamismo */
+}
+
+/* Ocultar la línea inferior en los submenús */
+header .nav ul li ul li a::after {
+    display: none;
+}
 /*----------------INICIO-----------------*/
-.carrusel {
-	width: 100%;
-    height: auto;
-	margin:50px auto 0;
-	overflow: hidden;
-}
-.carrusel ul {
-	display: flex;
-	padding: 0;
-	width: 400%;
-	
-	animation: slide 20s infinite alternate ease-in-out;
-}
-.carrusel li {
-	width: 100%;
-	list-style: none;
-}
-@keyframes slide {
-	0% {margin-left: 0;}
-	20% {margin-left: 0;}
-	
-	25% {margin-left: -100%;}
-	45% {margin-left: -100%;}
-	
-	50% {margin-left: -200%;}
-	70% {margin-left: -200%;}
-	
-	75% {margin-left: -300%;}
-	100% {margin-left: -300%;}
+.hero-diagnostico {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(240,242,245,1) 100%);
+    border-bottom: 2px solid #2FB4CC;
+    margin-top: 80px; /* Para esquivar el header fijo */
 }
 
+/* Animación de la máquina de escribir */
+.texto-maquina {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid #E67E22; /* El cursor naranja */
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+        teclear 3.5s steps(40, end),
+        parpadeo-cursor .75s step-end infinite;
+}
+
+@keyframes teclear {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes parpadeo-cursor {
+    from, to { border-color: transparent }
+    50% { border-color: #E67E22; }
+}
 /*----------------Primer Equipo-----------------*/
 h2
 {
@@ -221,44 +308,91 @@ h2
     align-items: center;
     flex-wrap: wrap;
 }
+/* --- ESPACIO PARA EL ELECTROCARDIOGRAMA --- */
+/* --- ECG GRANDE SIN CORTES --- */
+.ecg-divider {
+    width: 100%;
+    height: 100px;
+    margin: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.ecg-divider svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible !important; 
+}
+
+.ecg-divider path {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: latido 3.5s linear infinite;
+}
+
+@keyframes latido {
+    0% { stroke-dashoffset: 2000; }
+    50% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -2000; }
+}
+
+/* --- ESTILO CREDENCIAL INSTITUCIONAL (Bordes Rectos) --- */
 .personaje {
-	width:500px;
-    padding: 20px;
-    cursor: pointer;
-	position: relative;
-	object-fit: cover;
+    background: #FFFFFF;
+    padding: 20px 20px 80px 20px; 
+    border-radius: 4px; /* Casi cuadrado, como plástico duro */
+    border-top: 15px solid #0A1A2A; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
+
 .imagen-personaje {
-	border-radius: 30px;
-	width: 80%;
-	padding: 20px;
-	position: relative;
-    transition: transform 0.3s ease;
-	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center 10%; 
+    border-radius: 0; /* Bordes rectos: da un toque más fotográfico y médico */
+    filter: contrast(110%) grayscale(20%);
+    transition: filter 0.3s ease;
 }
-.imagen-personaje:hover {
-    transform: scale(1.1); /* Efecto de mini zoom */
-	filter: contrast(130%);
+
+.personaje:hover .imagen-personaje {
+    filter: contrast(120%) grayscale(0%);
 }
+
+/* --- IMÁGENES CON BORDES RECTOS --- */
+.personaje .imagen-personaje {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center 10%; 
+    
+    /* Forzamos bordes cuadrados ignorando cualquier código viejo */
+    border-radius: 0 !important; 
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    
+    filter: contrast(110%) grayscale(20%);
+    transition: filter 0.3s ease, transform 0.6s ease;
+    padding: 0 !important;
+}
+
 .nombre-personaje {
-	font-family:"Lato", sans-serif;
-	font-style: italic;
-	font-weight: bold;
-	font-size: 30px;
-	display:inline-block;
-    position:absolute;
-	background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 10px 10px;
-    border-radius: 5px;
-    opacity: 0; /* Inicialmente oculto */
-    transition: opacity 0.5s ease;
-	transition: transform 1.3s ease;
-	z-index: 2;
-	bottom: -30px;
-	left: 50%;
-	overflow: hidden;
-	white-space: nowrap;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    color: #0A1A2A;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* En lugar de animarse desde abajo, ahora siempre es visible como en una credencial real */
 }
 .personaje:hover .nombre-personaje{
     opacity: 1; /* Mostrar el nombre al pasar el mouse */
@@ -275,6 +409,7 @@ h4{
 	font-size: 1.5rem;
 	text-decoration: underline;
 }
+/*---------------SEPARACION-----------*/
 
 /*---------------HISTORIA---------------*/
 .letra
@@ -830,11 +965,20 @@ form .campo,textarea{
 
 @media(max-width: 480px) { 
 
-header{
-	padding: 20px 10%;
+#menu-bar {
+    display: none !important; /* Destruye el checkbox en todas las pantallas */
 }
-header label{
-	display: initial;
+
+header label[for="menu-bar"] {
+    display: none !important; /* Oculta las 3 líneas en PC obligatoriamente */
+    cursor: pointer;
+    font-size: 28px;
+    color: #0A1A2A;
+    transition: color 0.3s ease;
+}
+
+header label[for="menu-bar"]:hover {
+    color: #2FB4CC;
 }
 header .nav{
 	position: absolute;
@@ -1177,5 +1321,213 @@ form .campo, form textarea {
 
 }
 
+/* --- ANIMACIONES DE SCROLL (Vinculadas a main.js) --- */
+.animacion-oculta {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
+.animacion-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
+/* --- REDISEÑO DE LAS SECCIONES DE EQUIPOS (Grid en lugar de Flex) --- */
+/* Modificamos el contenedor principal de los personajes en Inicio */
+.secundario {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- REDISEÑO DE LAS TARJETAS DE PERSONAJE --- */
+.personaje {
+    width: 100%; /* Se adapta al Grid */
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; /* Bordes más modernos */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.personaje a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.imagen-personaje {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    padding: 0; /* Quitamos el padding para que la imagen llene la tarjeta */
+    transition: transform 0.6s ease, filter 0.6s ease;
+    filter: grayscale(30%) contrast(110%); /* Toque ligeramente frío y clínico */
+    display: block;
+}
+
+/* Efecto dramático al pasar el cursor */
+.personaje:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(10, 26, 42, 0.4); /* Sombra azul oscura */
+}
+
+.personaje:hover .imagen-personaje {
+    transform: scale(1.08);
+    filter: grayscale(0%) contrast(120%); /* Recupera el color completo */
+}
+
+/* Rediseño del nombre emergente */
+.nombre-personaje {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(10, 26, 42, 0.95), transparent); /* Degradado en lugar de caja sólida */
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 40px 20px 20px 20px; /* Padding extra arriba para el degradado */
+    margin: 0;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    border-radius: 0 0 15px 15px;
+}
+
+.personaje:hover .nombre-personaje {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- REDISEÑO DEL FORMULARIO DE CONTACTO --- */
+.container-form {
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo semitransparente blanco para que destaque */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.container-form h2 {
+    color: #0A1A2A;
+    font-weight: 700;
+}
+
+.container-form .campo, .container-form textarea {
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-form .campo:focus, .container-form textarea:focus {
+    border-color: #2FB4CC; /* Color de acento azul */
+    box-shadow: 0 0 8px rgba(47, 180, 204, 0.3);
+}
+
+.btn-enviar {
+    background: #0A1A2A; /* Azul oscuro corporativo */
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 8px;
+}
+
+.btn-enviar:hover {
+    background: #2FB4CC; /* Acento cian vibrante */
+}
+
+@media(max-width: 768px) { 
+    /* --- MENÚ RESPONSIVE --- */
+    header {
+        padding: 15px 5%;
+    }
+    
+    header label {
+        display: block; /* Muestra el ícono hamburguesa */
+    }
+    
+    header .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0A1A2A; /* Menú móvil oscuro */
+        border-top: 2px solid #2FB4CC;
+        display: none; /* Oculto por defecto */
+        flex-direction: column;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+    
+    header .nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    header .nav ul li a {
+        color: #FFFFFF;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    /* Quitamos la línea animada en móvil porque no se ve bien en vertical */
+    header .nav ul li a::after {
+        display: none;
+    }
+    
+    header .nav ul li a:hover {
+        background-color: rgba(47, 180, 204, 0.1);
+        padding-left: 25px; /* Empuje a la derecha al hacer tap */
+    }
+    
+    /* Submenús en Móvil */
+    header .nav ul li ul {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        display: none; /* Oculto hasta que se toque el menú padre */
+        background-color: rgba(0, 0, 0, 0.2); /* Fondo más oscuro para el submenú */
+    }
+    
+    header .nav ul li:hover > ul {
+        display: block; /* Muestra el submenú en móvil */
+    }
+
+    /* Mostrar el menú al clickear la hamburguesa */
+    #menu-bar:checked ~ .nav {
+        display: flex;
+    }
+
+    /* Ajustar el logo en móvil */
+    .logo-house {
+        font-size: 24px;
+    }
+    .logo-house .caja-h {
+        height: 32px;
+    }
+    .logo-house .md {
+        font-size: 14px;
+    }
+	/* Aparecen las 3 líneas en móvil */
+    header label[for="menu-bar"] {
+        display: block !important; 
+    }
+    
+    /* Mostrar el menú desplegable al hacer clic */
+    #menu-bar:checked ~ .nav {
+        display: flex !important;
+    }
+}
