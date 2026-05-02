@@ -627,58 +627,52 @@ h4{
     filter: grayscale(0%) opacity(1);
     transform: scale(1.05);
 }
-/*---------------DR HOUSE---------------*/
-.banner
-{
-	margin-top: 20px;
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
+/*---------DR HOUSE (Video Banner)-----------*/
+.banner {
+    margin-top: 80px; /* Compensa el header fijo */
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Un poco menos alto para que el usuario vea que hay contenido abajo */
+    overflow: hidden;
+    background-color: #000; /* Fondo negro de seguridad */
 }
-.video-house
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-.banner h1
-{
 
-	position: absolute;
+.video-house {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+    opacity: 0.6; /* Oscurece el video para que el texto resalte más */
+}
+
+.banner h1 {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "House M.D.", sans-serif;
-    background: #000;
-    color: #fff;
-    font-size: 210px; 
+    color: #FFFFFF;
+    font-size: 120px; /* Tamaño más controlado */
     font-weight: 400;
-    mix-blend-mode: multiply;
     text-align: center;
-    padding: 20px;
     width: 100%; 
-    max-width: 100%;
-	height: 100%;
-	margin: 0;
+    margin: 0;
+    text-shadow: 2px 4px 20px rgba(0,0,0,0.8); /* Sombra para que se lea perfecto sobre el video */
+    letter-spacing: 5px;
 }
 
-.contenedor-imagen {
-    width: 100%; 
-    height: 200px; 
-    overflow: hidden; 
-    position: relative;
-}
-
-.imagen-ajustada {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    object-position: 50% 50%; 
-	transform: scale(1.3); 
+@media(max-width: 768px) {
+    .banner h1 {
+        font-size: 60px; /* Ajuste para celulares */
+    }
+    .banner {
+        height: 50vh;
+    }
 }
 
 /*---------------PERSONAJES---------------*/
@@ -1367,12 +1361,51 @@ footer img{
 .reviews {
 	margin-top: 10px;
 }
-/*---------DR HOUSE-----------*/
+/*---------DR HOUSE (Video Banner)-----------*/
+.banner {
+    margin-top: 85px; /* Esquiva la altura exacta de nuestro nuevo header */
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 85px); /* Ocupa el resto de la pantalla exacta, sin cortarse */
+    overflow: hidden;
+    background-color: #000; /* Fondo negro de seguridad */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Flexbox centra el título a la perfección */
+}
+
+.video-house {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adapta el video nativamente sin deformarlo */
+    opacity: 0.5; /* Un poco más oscuro para que el texto resalte mejor */
+    z-index: 1;
+}
+
 .banner h1 {
-	font-size: 70px; 
-	padding: 0px; 
-	width: 100%; 
-	top: 60%; 
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté por encima del video */
+    font-family: "House M.D.", sans-serif;
+    color: #FFFFFF;
+    font-size: 130px; 
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 4px 20px rgba(0,0,0,0.8);
+    letter-spacing: 5px;
+}
+
+@media(max-width: 768px) {
+    .banner {
+        margin-top: 60px; /* El header de celular es más bajo */
+        height: calc(100vh - 60px);
+    }
+    .banner h1 {
+        font-size: 60px; /* Letra más chica para móviles */
+    }
 }
 /*---------CREADORES-----------*/
 .img-left {
