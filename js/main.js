@@ -12,12 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
         threshold: 0.15 // Se activa cuando el 15% del elemento es visible
     });
 
-    // Seleccionamos los elementos de index.html que queremos animar
-    const elementosAAnimar = document.querySelectorAll('.sect-principal, .personaje, .container-form');
+    // Seleccionamos los elementos viejos del index Y cualquier elemento nuevo que tenga la clase
+    const elementosAAnimar = document.querySelectorAll('.sect-principal, .personaje, .container-form, .animacion-oculta');
 
-    // Añadimos la clase oculta inicial y los empezamos a observar
+    // Los procesamos todos
     elementosAAnimar.forEach(el => {
-        el.classList.add('animacion-oculta');
+        // Si el elemento no tiene la clase oculta inicial (como pasaba en el index), se la agregamos
+        if (!el.classList.contains('animacion-oculta')) {
+            el.classList.add('animacion-oculta');
+        }
+        // Empezamos a vigilar el elemento
         observer.observe(el);
     });
 });

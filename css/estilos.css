@@ -666,12 +666,139 @@ h4{
     letter-spacing: 5px;
 }
 
+/*---------------DIRECTORIO DE EQUIPO (Tarjetas Zig-Zag)---------------*/
+.directorio-equipo {
+    padding: 20px 0 80px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Separación entre cada expediente */
+}
+
+.expediente-personal {
+    display: grid;
+    grid-template-columns: 350px 1fr; /* Imagen 350px, el texto toma el resto */
+    gap: 40px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-left: 8px solid #0A1A2A; /* Banda oscura a la izquierda */
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+    align-items: stretch;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.expediente-personal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(10,26,42,0.15);
+    border-left-color: #2FB4CC; /* Se ilumina en cian */
+}
+
+/* El bloque de la imagen */
+.foto-credencial {
+    position: relative;
+    height: 100%;
+    min-height: 350px;
+}
+
+.foto-credencial img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%; /* Mantiene las caras enfocadas */
+    filter: grayscale(20%) contrast(110%);
+}
+
+.etiqueta-nombre {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(10, 26, 42, 0.95), rgba(10, 26, 42, 0.8));
+    color: white;
+    padding: 20px;
+    text-align: left;
+    border-top: 2px solid #2FB4CC;
+}
+
+.etiqueta-nombre h3 {
+    margin: 0 0 5px 0;
+    font-size: 22px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.etiqueta-nombre span {
+    font-size: 13px;
+    color: #2FB4CC;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* El bloque del texto */
+.datos-personales {
+    padding: 40px 40px 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.datos-personales p {
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* --- MAGIA DEL ZIG-ZAG (Alternar lados en elementos pares) --- */
+.expediente-personal:nth-child(even) {
+    grid-template-columns: 1fr 350px; /* Invierte las columnas */
+    border-left: 1px solid #eeeeee;
+    border-right: 8px solid #0A1A2A; /* Banda oscura pasa a la derecha */
+}
+
+.expediente-personal:nth-child(even):hover {
+    border-right-color: #E67E22; /* En los pares se ilumina de naranja */
+}
+
+.expediente-personal:nth-child(even) .foto-credencial {
+    order: 2; /* Mueve visualmente la imagen a la derecha */
+}
+
+.expediente-personal:nth-child(even) .datos-personales {
+    order: 1; /* Mueve visualmente el texto a la izquierda */
+    padding: 40px 0 40px 40px;
+}
+
 @media(max-width: 768px) {
     .banner h1 {
         font-size: 60px; /* Ajuste para celulares */
     }
     .banner {
         height: 50vh;
+    }
+
+    .expediente-personal,
+    .expediente-personal:nth-child(even) {
+        grid-template-columns: 1fr; /* 1 sola columna */
+        border-left: 8px solid #0A1A2A;
+        border-right: 1px solid #eeeeee;
+    }
+    
+    .foto-credencial {
+        min-height: 300px;
+    }
+    
+    /* Obligamos a que la imagen siempre quede arriba en celulares */
+    .expediente-personal:nth-child(even) .foto-credencial {
+        order: 1;
+    }
+    
+    .expediente-personal:nth-child(even) .datos-personales,
+    .datos-personales {
+        order: 2;
+        padding: 30px !important;
     }
 }
 
