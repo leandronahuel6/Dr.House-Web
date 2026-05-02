@@ -21,8 +21,7 @@
             </a>
         </div>    
         
-        <input type="checkbox" id="menu-bar">
-        <label for="menu-bar"><i class="fa-solid fa-bars"></i></label>
+
         
         <nav class="nav">
             <ul>
@@ -63,12 +62,13 @@
             </div>
         </section>
 
-        <h1 class="w3-wide" style="font-size: 50px;">House D.M.</h1>
-        <p class="sub-titulo fotos-opacidad"><i>Los Pioneros del Diagnóstico</i></p>
+        <!-- Título corregido a h2 y ajuste de texto -->
+        <h2 class="w3-wide" style="font-size: 40px; margin-top: 40px;">House M.D.: El Equipo Original</h2>
+        <p class="sub-titulo fotos-opacidad" style="margin-bottom: 20px;"><i>Los Pioneros del Diagnóstico</i></p>
         <p class="texto parrafo justificado" style="text-align: left;">
             El <strong>equipo de diagnóstico</strong> del Dr. House, conformado por el Dr. Eric Foreman, 
-            la Dra. Allison Cameron y el Dr. Robert Chase, el primer equipo que trabajó bajo la dirección del Dr. House y sentaron las bases para los equipos futuros.
-            Además, su enfoque innovador y a menudo no convencional para el diagnóstico los distingue como pioneros en su campo.
+            la Dra. Allison Cameron y el Dr. Robert Chase, fue el primer equipo que trabajó bajo su dirección y sentó las bases para los equipos futuros.
+            Su enfoque innovador y a menudo no convencional para el diagnóstico los distingue como pioneros en su campo.
         </p>
         
         <div class="main">
@@ -95,11 +95,11 @@
         </div>
     </section>
 
-    <div class="ecg-divider">
-        <svg viewBox="0 0 1000 150" preserveAspectRatio="none">
-            <path d="M0,75 L400,75 L430,20 L470,130 L500,75 L1000,75" fill="none" stroke="#2FB4CC" stroke-width="4"></path>
-        </svg>
-    </div>
+<div class="ecg-divider">
+    <svg viewBox="0 0 500 100" preserveAspectRatio="none">
+        <path d="M0,50 L200,50 L210,20 L230,90 L240,50 L500,50" fill="none" stroke="#2FB4CC" stroke-width="3"></path>
+    </svg>
+</div>
 
     <section class="sect-principal">
         <h2 class="w3-wide" style="padding-top: 40px;">House D.M.: La Nueva Generación</h2>
@@ -155,59 +155,60 @@
     
     <a class="arriba" href="#"><i class="fa-solid fa-up-long"></i></a>
 
-    <section class="sect-principal img-form" id="TPFORM">
-        <div class="main container-form" style="max-width:800px" id="contact">
-            <div class="info-form">
-                <h2 class="w3-wide">CONTACTO</h2>
-                <p>
-                    ¿Quiere hacer algún comentario en cuanto a nuestra página web?<br>
-                    ¡Todos sus mensajes son bienvenidos!<br>
-                    ¡Complete el formulario y envíelo!
-                </p>
-            </div>
+<!--Contacto Estilo Princeton-Plainsboro-->
+<section class="sect-principal img-form" id="TPFORM">
+    <div class="main container-form" style="max-width:900px" id="contact">
+        
+        <div class="info-form">
+            <h2 class="w3-wide">DEPARTAMENTO DE DIAGNÓSTICO</h2>
+            <p>
+                ¿Síntomas, quejas, epifanías médicas o simplemente quiere decirnos que nos equivocamos?<br><br>
+                Complete su historial clínico. Lo leeremos... siempre y cuando no interfiera con nuestras horas de clínica. Y recuerde: <strong>Everybody lies</strong> (Todos mienten).
+            </p>
+        </div>
 
-            <form action="https://formsubmit.co/leandrodavalos15@gmail.com" method="post">
-                <input class="campo" type="text" placeholder="Nombre" required name="Nombre">
-                <input class="campo" type="email" placeholder="Email" required name="Email">   
-                <textarea name="mensaje" placeholder="Ingresa tu mensaje" required></textarea>                            
-                <input class="btn-enviar" type="submit" value="Enviar Mensaje">
-                <input type="hidden" name="_next" value="http://127.0.0.1:5500/.">
-                <input type="hidden" name="_captcha" value="false">
-            </form>
-        </div>
-    </section>
+        <form action="https://formsubmit.co/leandrodavalos15@gmail.com" method="post" class="formulario-medico">
+            <input class="campo" type="text" placeholder="Nombre del Paciente" required name="Nombre">
+            <input class="campo" type="email" placeholder="Correo Electrónico" required name="Email">   
+            <textarea class="campo" name="mensaje" placeholder="Describa sus síntomas (Mensaje)" required></textarea>                            
+            <input class="btn-enviar" type="submit" value="Enviar Diagnóstico">
 
-    <footer class="pie-pagina">
-        <div class="grupo-1">
-            <div class="box">
-                <figure>
-                    <a href="#">
-                        <img src="images/principal/logo.png" alt="Logo de la Serie">
-                    </a>
-                </figure>
-            </div>
-            <div class="box">
-                <h2>SOBRE NOSOTROS</h2>
-                <p>
-                    Bienvenidos a <strong>Dr.House Hub</strong>, es un sitio web <strong>no oficial</strong>, hecha por un fan para fans.
-                    Este sitio comparte contenido exclusivo sobre la serie, datos sobre la serie tanto dentro como fuera de la serie.
-                </p>
-                <p>Únete a nuestra comunidad y descubre por qué Dr. House sigue siendo una referencia en la televisión mundial.</p>
-            </div>
-            <div class="box">
-                <h2>SIGUENOS</h2>
-                <div class="red-social">
-                    <a href="https://www.facebook.com/?locale=es_LA" class="fa fa-facebook" aria-label="Facebook"></a>
-                    <a href="https://www.instagram.com/" class="fa fa-instagram" aria-label="Instagram"></a>
-                    <a href="https://twitter.com/?lang=es" class="fa fa-twitter" aria-label="Twitter"></a>
-                    <a href="https://www.youtube.com/?hl=es-419&gl=AR" class="fa fa-youtube" aria-label="YouTube"></a>
-                </div>
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/.">
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+
+    </div>
+</section>
+
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                <!-- Logo CSS con clase extra para versión blanca -->
+                <a href="index.html" class="logo-house logo-blanco">
+                    <span class="caja-h">H</span>OUSE <span class="md">M.D.</span>
+                </a>
+            </figure>
+        </div>
+        <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>Bienvenidos a <strong>Dr.House Hub</strong>, un archivo clínico no oficial creado por un fan para fans. Aquí compartimos los diagnósticos, anécdotas y detalles ocultos de la serie.</p>
+            <p>Únete a nuestro equipo y descubre por qué Gregory House cambió la televisión médica para siempre.</p>
+        </div>
+        <div class="box">
+            <h2>SÍGUENOS</h2>
+            <div class="red-social">
+                <a href="https://www.facebook.com/?locale=es_LA" class="fa fa-facebook" aria-label="Facebook"></a>
+                <a href="https://www.instagram.com/" class="fa fa-instagram" aria-label="Instagram"></a>
+                <a href="https://twitter.com/?lang=es" class="fa fa-twitter" aria-label="Twitter"></a>
+                <a href="https://www.youtube.com/?hl=es-419&gl=AR" class="fa fa-youtube" aria-label="YouTube"></a>
             </div>
         </div>
-        <div class="grupo-2">
-            <small>&copy; 2024 <b>Leandro Davalos</b> - Todos los Derechos Reservados.</small>
-        </div>
-    </footer>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2026 <b>Leandro Davalos</b> - Todos los Derechos Reservados | Archivo del Princeton-Plainsboro.</small>
+    </div>
+</footer>
       
     <script src="js/main.js"></script>
 </body>
