@@ -1,27 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Configuramos el Intersection Observer
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animacion-visible');
-                // Dejamos de observar una vez que ya apareció
+                // Pequeño retraso para que la animación sea más suave y no se trabe al hacer F5
+                setTimeout(() => {
+                    entry.target.classList.add('animacion-visible');
+                }, 100);
                 observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.15 // Se activa cuando el 15% del elemento es visible
+        threshold: 0.02, // Lo bajamos al 2% para que reaccione casi de inmediato
+        rootMargin: "0px 0px -20px 0px" // Ayuda a que el cálculo no falle en elementos muy altos
     });
 
-    // Seleccionamos los elementos viejos del index Y cualquier elemento nuevo que tenga la clase
-    const elementosAAnimar = document.querySelectorAll('.sect-principal, .personaje, .container-form, .animacion-oculta');
+    const elementosAAnimar = document.querySelectorAll('.animacion-oculta, .sect-principal, .personaje, .container-form');
 
-    // Los procesamos todos
     elementosAAnimar.forEach(el => {
-        // Si el elemento no tiene la clase oculta inicial (como pasaba en el index), se la agregamos
         if (!el.classList.contains('animacion-oculta')) {
             el.classList.add('animacion-oculta');
         }
-        // Empezamos a vigilar el elemento
         observer.observe(el);
     });
 });

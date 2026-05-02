@@ -887,47 +887,134 @@ hr{
     opacity: 1;
 }
 
-/*---------------TEMPORADAS---------------*/
-.sec-tempo{
-	
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	display:flex;
-	width: 1250px;
-	height: 600px;
-	background-color: white;
-    
+/*---------------LÍNEA DE TIEMPO (Evolución de Temporadas)---------------*/
+.contenedor-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
-.sec-tempo img{
-	width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: 0.8;
-    transition: width 0.5s ease, opacity 0.5s ease;
+
+/* La línea vertical central */
+.contenedor-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: #0A1A2A;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    opacity: 0.1; /* Línea sutil */
 }
-.sec-tempo img:hover{
-	width: 200px;
-	opacity: 1;
-	filter: contrast(110%);
+
+.timeline-nodo {
+    position: relative;
+    margin-bottom: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.tempo{
-	max-width: 1300px;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-  	text-align: center;
-	text-transform: none;
-	background-color: white;
-	margin-top: 10px;
-	border-radius: 10px;
+
+/* Invierte el orden para los nodos pares (Zig-Zag) */
+.timeline-nodo:nth-child(even) {
+    flex-direction: row-reverse;
 }
-.sub-tempo{
-	height: 100%;
-	padding-left: 0;
-	border-radius: 10px;
-	padding-bottom: 10px;
+
+/* El círculo (latido/nodo) en la línea */
+.timeline-marcador {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background: #2FB4CC;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(47, 180, 204, 0.2);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.timeline-nodo:hover .timeline-marcador {
+    background: #E67E22;
+    box-shadow: 0 0 0 6px rgba(230, 126, 34, 0.3);
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Tarjeta de la temporada */
+.timeline-contenido {
+    width: 45%; /* Deja espacio para la línea central */
+    background: #ffffff;
+    border-radius: 4px;
+    border-top: 6px solid #0A1A2A;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.timeline-nodo:hover .timeline-contenido {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(10, 26, 42, 0.15);
+    border-top-color: #2FB4CC;
+}
+
+.timeline-nodo:nth-child(even):hover .timeline-contenido {
+    border-top-color: #E67E22; /* Los pares se iluminan naranja */
+}
+
+/* Contenedor de la portada */
+.timeline-imagen {
+    width: 100%;
+    height: 380px; /* Aumentamos el alto para acomodar portadas verticales */
+    background-color: #0A1A2A; /* Fondo oscuro médico por si sobra espacio a los lados */
+    overflow: hidden;
+    border-bottom: 2px solid #2FB4CC; /* Un detalle cian para separar la foto del texto */
+    display: flex; /* Ayuda a centrar la imagen */
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ¡LA MAGIA! Fuerza a que se vea la imagen completa */
+    filter: grayscale(15%) contrast(110%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+.timeline-nodo:hover .timeline-imagen img {
+    filter: grayscale(0%) contrast(115%);
+    transform: scale(1.03); /* Pequeño zoom elegante sin salirse de la caja */
+}
+
+.timeline-texto {
+    padding: 30px;
+}
+
+.timeline-titulo {
+    color: #0A1A2A;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 22px;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.timeline-fecha {
+    font-size: 14px;
+    color: #2FB4CC;
+    font-family: monospace;
+    font-weight: 800;
 }
 
 /*---------------CRITICAS Y NOTAS---------------*/
@@ -1671,15 +1758,16 @@ form .campo, form textarea {
 }
 
 /* --- ANIMACIONES DE SCROLL (Vinculadas a main.js) --- */
+/*--- CLASES DE ANIMACIÓN JS ---*/
 .animacion-oculta {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(40px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .animacion-visible {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 /* --- REDISEÑO DE LAS SECCIONES DE EQUIPOS (Grid en lugar de Flex) --- */
@@ -1917,5 +2005,24 @@ form .campo, form textarea {
         grid-template-columns: 1fr;
         padding: 20px;
         gap: 20px;
+    }
+
+    /* Ajustes Timeline Móvil */
+    .contenedor-timeline::before {
+        left: 20px; /* Movemos la línea a la izquierda */
+    }
+    
+    .timeline-nodo, 
+    .timeline-nodo:nth-child(even) {
+        flex-direction: column; /* Apila los elementos */
+        align-items: flex-end; /* Empuja la tarjeta a la derecha */
+    }
+    
+    .timeline-marcador {
+        left: 20px; /* El marcador sigue a la línea */
+    }
+    
+    .timeline-contenido {
+        width: calc(100% - 60px); /* Ocupa el espacio restante */
     }
 }
