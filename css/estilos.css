@@ -511,63 +511,121 @@ h4{
 .signos-vitales strong {
     color: #0A1A2A;
 }
-/*---------------CREADORES---------------*/
-.contenedor-creadores {
-	margin-top: 20px;
-	display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    flex-wrap: wrap; 
+/*---------------SECCIÓN CREADORES (Directorio y Multimedia)---------------*/
+.perfil-creador {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    padding: 40px;
+    align-items: center;
 }
-.imagen-contenedor
-{
-	width: 24%; 
-    position: relative; 
-    overflow: hidden; 
-	border-radius: 20px;
+
+.creador-foto img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-bottom: 5px solid #2FB4CC;
+    filter: grayscale(20%);
 }
-.imagen-contenedor img {
-	width: 100%; 
-   	height: 300px;
-    object-fit: cover; 
+
+.divisor-clinico {
+    border: 0;
+    height: 1px;
+    background: #eeeeee;
+    margin: 0 40px;
 }
-.imagen-creador
-{
-	width: 25%;
+
+/* Directorio de Personal (Listas) */
+.directorio-personal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 40px;
 }
-.creador
-{
-	width: 70%; 
-    position: relative; 
-    overflow: hidden; 
-	border-radius: 20px;
-}
-.container-lista {
+
+.lista-clinica h3 {
+    color: #0A1A2A;
+    border-bottom: 2px solid #2FB4CC;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
 }
-.lista {
-    width: calc(50% - 10px); 
-    margin-bottom: 20px; 
+
+.lista-clinica ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-.lista h3 {
-    margin-top: 50px; 
+
+.lista-clinica li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+    color: #555;
+    font-size: 15px;
 }
-.lista ul
-{
-	padding-left: 20px;
+
+.lista-clinica li:last-child {
+    border-bottom: none;
 }
-.audio-creador
-{
-	margin-top: 100px;
-	margin-left: 40px;
+
+.lista-clinica li strong {
+    color: #0A1A2A;
 }
-.video-creador
-{
-	border-radius: 20px;
-	margin-left: 40px;
-	margin-top: 40px;
+
+/* Evidencia Multimedia */
+.evidencia-multimedia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    padding: 40px;
+}
+
+.multimedia-box {
+    background: #F8F9FA;
+    padding: 25px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.multimedia-box h3 {
+    color: #0A1A2A;
+    margin-top: 0;
+}
+
+.reproductor-clinico {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Entidades Productoras (Logos) */
+.entidades-corporativas {
+    padding: 40px;
+}
+
+.productoras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    align-items: center;
+}
+
+/* Entidades Productoras (Logos con tamaño uniforme) */
+.productoras-grid img {
+    width: 100%;
+    height: 100px; /* Le damos una altura fija a todos los logos */
+    object-fit: contain; /* Encaja el logo dentro de los 100px sin deformarlo ni estirarlo */
+    object-position: center; /* Centra el logo en su caja */
+    filter: grayscale(100%) opacity(0.6);
+    transition: all 0.4s ease;
+}
+
+.productoras-grid img:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.05);
 }
 /*---------------DR HOUSE---------------*/
 .banner
@@ -1692,5 +1750,12 @@ form .campo, form textarea {
         align-items: flex-start;
         gap: 10px;
         padding: 20px;
+    }
+
+    /* Ajustes Creadores Móvil */
+    .perfil-creador {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
     }
 }
