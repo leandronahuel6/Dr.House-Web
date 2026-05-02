@@ -400,60 +400,117 @@ h4{
 /*---------------SEPARACION-----------*/
 
 /*---------------HISTORIA---------------*/
-.letra
-{
-	font-family: "House M.D.";
-	justify-content: center;
-	align-items: center;
-	font-size: 50px;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-}
-.img-left
-{	
-	border-radius: 20px;
-	float: left;
-	width:40%;
-	margin-right: 10px;
-	margin-left: 10px;
-}
-.imagen-anecdota
-{
-	float: right;
-	width: 300px; 
-    height: 300px; 
-    object-fit: cover;
-	border-radius: 20px;
-	margin-bottom: 20px;
-	margin-right: 20px;
-	
-}
-.imagen-anecdota-left
-{
-	float: left;
-	width: 300px; 
-    height: 300px; 
-    object-fit: cover;
-	border-radius: 20px;
-	position: relative;
-	margin-bottom: 20px;
-	margin-left: 20px;
-	padding-right: 10px;
-}
-.texto
-{
-	font-size: 20px;
-	font-family: "Lato", sans-serif;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	text-align: left;
-}
-.contenedor
-{
-	display:inline-block;
-	align-items: center;
+/*---------------SECCIÓN HISTORIA (Estilo Expediente)---------------*/
+.expediente-medico {
+    background-color: #ffffff;
+    border-top: 10px solid #0A1A2A; /* Banda oscura superior */
+    box-shadow: 0 15px 35px rgba(10, 26, 42, 0.1);
+    border-radius: 4px;
+    padding: 0 !important; /* Quitamos el padding global para controlar el encabezado */
+    overflow: hidden;
+    margin-bottom: 60px;
 }
 
+.encabezado-expediente {
+    background-color: #F8F9FA;
+    border-bottom: 2px solid #eeeeee;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.codigo-caso {
+    font-family: monospace;
+    color: #2FB4CC;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 2px;
+    background-color: rgba(47, 180, 204, 0.1);
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+/* Sistema de Grid para Historia */
+.grid-historia {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* La imagen ocupa 1 fracción, el texto 1.5 */
+    gap: 40px;
+    padding: 40px;
+    align-items: start;
+}
+
+.imagen-historia {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    filter: contrast(110%) grayscale(15%); /* Tratamiento fotográfico frío */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-bottom: 5px solid #E67E22; /* Acento naranja sutil */
+}
+
+/* Efecto de Letra Capitular (La primera letra gigante) */
+.drop-cap::first-letter {
+    font-family: "House M.D.", sans-serif;
+    font-size: 4em;
+    font-weight: 900;
+    color: #0A1A2A;
+    float: left;
+    margin-top: -0.1em;
+    margin-right: 0.15em;
+    line-height: 1;
+}
+
+.columna-texto p {
+    color: #444;
+    line-height: 1.8;
+}
+
+/* --- FICHA TÉCNICA (Signos Vitales) --- */
+.signos-vitales {
+    background-color: #F8F9FA;
+    border: 1px solid #eeeeee;
+    border-left: 4px solid #2FB4CC; /* Línea cian de acento */
+    padding: 20px;
+    margin-top: 25px; /* Separación de la imagen */
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.signos-vitales h3 {
+    color: #0A1A2A;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.signos-vitales ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.signos-vitales li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e0e0e0;
+    font-size: 14.5px;
+    color: #555;
+    display: flex;
+    justify-content: space-between; /* Separa la etiqueta del valor */
+}
+
+.signos-vitales li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.signos-vitales strong {
+    color: #0A1A2A;
+}
 /*---------------CREADORES---------------*/
 .contenedor-creadores {
 	margin-top: 20px;
@@ -1621,5 +1678,19 @@ form .campo, form textarea {
     
     .pie-pagina .grupo-1 .box figure {
         justify-content: center; /* Centramos el logo */
+    }
+
+    /* Ajustes Historia Móvil */
+    .grid-historia {
+        grid-template-columns: 1fr; /* Pasa de 2 columnas a 1 sola */
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .encabezado-expediente {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 20px;
     }
 }
