@@ -1,80 +1,74 @@
 <!DOCTYPE html>
-<html lang="sp">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="images\principal\icono.ico">
-    <link rel="stylesheet" href="css\estilos.css">
-    <link rel="stylesheet" href="css\normalize.css">
-    <link rel="stylesheet" href="tipografia\stylesheet.css">
+    <link rel="icon" href="images/principal/icono.ico">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="tipografia/stylesheet.css">
     <script src="https://kit.fontawesome.com/bb2897d868.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <title>HouseM.D. Hub - Criticas y Notas</title>
-</head> 
+</head>
 <body>
     <header>
-        <div >
-            <a href="index.html"><img class="logo" src="images\principal\logo.png" alt="Logo Dr.House"></a>
+        <div>
+            <a href="index.html" class="logo-house">
+                <span class="caja-h">H</span>OUSE <span class="md">M.D.</span>
+            </a>
         </div>    
+        
         <input type="checkbox" id="menu-bar">
         <label for="menu-bar"><i class="fa-solid fa-bars"></i></label>
         
         <nav class="nav">
             <ul>
-                <li><a href="index.html" id="op0" >Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li>
-                    <a >Sobre la Serie <i class="fa-solid fa-angle-down" style="font-size: 1rem;"></i></a>
+                    <a>Sobre la Serie <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="menu-vertical">
                         <li><a href="historia.html">Historia</a></li>
                         <li><a href="creadores.html">Creadores</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a>Personajes <i class="fa-solid fa-angle-down" style="font-size: 1rem;"></i></a>
+                    <a>Personajes <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="menu-vertical">
                         <li><a href="house.html">Dr. Gregory House</a></li>
                         <li><a href="equipo.html">Equipo de Diagnostico</a></li>
-
                     </ul>
                 </li>
-                <li><a href="temporadas.html" >Temporadas</a></li>
+                <li><a href="temporadas.html">Temporadas</a></li>
                 <li>
-                    <a id="op4">Detras del Diagnostico <i class="fa-solid fa-angle-down" style="font-size: 1rem;"></i></a>
+                    <a class="active">Detras del Diagnostico <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="menu-vertical">
-                        <li><a href="criticas.html" id="op4-2">Criticas y Notas</a></li>
+                        <li><a href="criticas.html" class="active">Criticas y Notas</a></li>
                         <li><a href="anecdotas.html">Anecdotas</a></li>
-
                     </ul>
                 </li>
-                <li><a href="galeria.html" class="active" >Galeria</a></li>
-                <li><a href="index.html#TPFORM" >Contacto</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="index.html#TPFORM">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <script type="text/javascript">
-        window.onload = function(){
-            document.getElementById("op4").style.background='#CCCCCC';
-            document.getElementById("op4-2").style.background='#CCCCCC'
-        }
-    </script>
-<section class="sect-principal">
-    <article>
-        <h1 class="letra">Criticas y notas</h1>
 
-                
-    <div class="testimonial-box-container">
+    <section class="sect-principal">
+        <article>
+            <h1 class="letra">Criticas y notas</h1>
+
+            <div class="testimonial-box-container">
                 <div class="testimonial-box">
                     <div class="box-top">
                         <div class="profile">      
                             <div class="profile-img">
-                                        <img src="images\principal\notas1.jpg" alt="logo de USA Today" /> 
+                                <img src="images/principal/notas1.jpg" alt="Logo de USA Today"> 
                             </div>
                             <div class="name-user">
-                                    <strong>USA Today</strong>
-                                    <span>@Rober Bianco</span>
+                                <strong>USA Today</strong>
+                                <span>@Rober Bianco</span>
                             </div>
                         </div>
                         <div class="reviews">
@@ -82,209 +76,201 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i><!--Empty star-->
+                            <i class="far fa-star"></i>
                         </div>
                     </div>
                     <div class="client-comment">
-                        <a href="https://usatoday30.usatoday.com/life/television/reviews/2008-09-15-house-preview_N.htm?csp=34" target="_blank" >
-                        <p>
-                            "Uno de los principales puntos fuertes de la serie es la manera en que los guionistas y el protagonista
-                            nos mantienen intentando saber dónde acaba la apariencia y empieza la realidad (...) " 
-                        </p>
+                        <a href="https://usatoday30.usatoday.com/life/television/reviews/2008-09-15-house-preview_N.htm?csp=34" target="_blank">
+                            <p>
+                                "Uno de los principales puntos fuertes de la serie es la manera en que los guionistas y el protagonista
+                                nos mantienen intentando saber dónde acaba la apariencia y empieza la realidad (...)" 
+                            </p>
                         </a>
                     </div>
                 </div>
-        
-            
-        
-        
-            <div class="testimonial-box">
-                <div class="box-top">
-                    <div class="profile">      
-                        <div class="profile-img">
-                                    <img src="images\principal\notas2.jpg" alt="logo de los angeles time" />
-                        </div>
-                        <div class="name-user">
+
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">      
+                            <div class="profile-img">
+                                <img src="images/principal/notas2.jpg" alt="Logo de Los Angeles Times">
+                            </div>
+                            <div class="name-user">
                                 <strong>Los Angeles Time</strong>
                                 <span>@Paul Brownfield</span>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
                         </div>
                     </div>
-                    <div class="reviews">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
+                    <div class="client-comment">
+                        <a href="https://www.latimes.com/archives/la-xpm-2004-nov-16-et-house16-story.html" target="_blank">
+                            <p>
+                                "'House es una fórmula. Pero lo que la salva de ser sólo una fórmula es Laurie, que me ha hecho reír mucho varias veces." 
+                            </p>
+                        </a>
                     </div>
                 </div>
-                <div class="client-comment">
-                    <a href="https://www.latimes.com/archives/la-xpm-2004-nov-16-et-house16-story.html" target="_blank" >
-                    <p>
-                        "'House es una fórmula. Pero lo que la salva de ser sólo una fórmula es Laurie, que me ha hecho reír mucho varias veces." 
-                    </p>
-                    </a>
-                </div>
-            </div>
-      
-            
-      
-        <div class="testimonial-box">
-            <div class="box-top">
-                <div class="profile">      
-                    <div class="profile-img">
-                                <img src="images\principal\notas3.jpg" alt="logo de time magazine" />
-                    </div>
-                    <div class="name-user">
-                            <strong>Time</strong>
-                            <span>@James Poniewozik</span>
-                    </div>
-                </div>
-                <div class="reviews">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-            </div>
-            <div class="client-comment">
-                <a href="https://content.time.com/time/subscriber/article/0,33009,995688,00.html" target="_blank" >
-                <p>
-                    "Divertida, inquisitiva y rigurosa (...) Como mirada honesta a la medicina, la tecnología y los privilegios de un genio, es tonificante." 
-                </p>
-                </a>
-            </div>
-        </div>
-  
 
-  
-        <div class="testimonial-box">
-            <div class="box-top">
-                <div class="profile">      
-                    <div class="profile-img">
-                                <img src="images\principal\nota4.jpg" alt="logo de the new york times"/>
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">      
+                            <div class="profile-img">
+                                <img src="images/principal/notas3.jpg" alt="Logo de Time Magazine">
+                            </div>
+                            <div class="name-user">
+                                <strong>Time</strong>
+                                <span>@James Poniewozik</span>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
                     </div>
-                    <div class="name-user">
-                            <strong>The New York Times</strong>
-                            <span>@Alessandra Stanley</span>
+                    <div class="client-comment">
+                        <a href="https://content.time.com/time/subscriber/article/0,33009,995688,00.html" target="_blank">
+                            <p>
+                                "Divertida, inquisitiva y rigurosa (...) Como mirada honesta a la medicina, la tecnología y los privilegios de un genio, es tonificante." 
+                            </p>
+                        </a>
                     </div>
                 </div>
-                <div class="reviews">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
+
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">      
+                            <div class="profile-img">
+                                <img src="images/principal/nota4.jpg" alt="Logo de The New York Times">
+                            </div>
+                            <div class="name-user">
+                                <strong>The New York Times</strong>
+                                <span>@Alessandra Stanley</span>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="client-comment">
+                        <a href="https://www.nytimes.com/2004/11/16/arts/television/with-terminal-witticism-even-cancer-can-be-fun.html" target="_blank">
+                            <p>
+                                "Los personajes son igual de planos que el guion, pero hay algo universalmente atractivo sobre la sangre, las vísceras y las camillas."
+                            </p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">      
+                            <div class="profile-img">     
+                                <img src="images/principal/notas5.jpg" alt="Logo de Empire Magazine"> 
+                            </div>
+                            <div class="name-user">
+                                <strong>Empire</strong>
+                                <span>@William Thomas</span>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="client-comment">
+                        <a href="https://www.empireonline.com/tv/reviews/house-season-1-review/" target="_blank">
+                            <p>
+                                "Laurie es la razón por la que ver este híbrido de 'CSI' y 'ER' que se hace repetitivo, pero que es siempre cautivador (...)"
+                            </p>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="client-comment">
-                <a href="https://www.nytimes.com/2004/11/16/arts/television/with-terminal-witticism-even-cancer-can-be-fun.html" target="_blank" >
-                <p>
-                    "Los personajes son igual de planos que el guion, pero hay algo universalmente atractivo sobre la sangre, las vísceras y las camillas."
-                </p>
-                </a>
-            </div>
-        </div>
-  
+        </article>
+    </section>
 
-        
-  
-    <div class="testimonial-box">
-        <div class="box-top">
-            <div class="profile">      
-                <div class="profile-img">     
-                            <img src="images\principal\notas5.jpg" alt="logo de empire magazine"/> 
-                </div>
-                <div class="name-user">
-                        <strong>Empire</strong>
-                        <span>@William Thomas</span>
+    <section class="sect-principal">
+        <article class="secundario">
+            <div class="card">
+                <figure>
+                    <img src="images/principal/laprensa.jpg" alt="Logo La Prensa">
+                </figure>
+                <div class="contenido-card">
+                    <h3>La prensa</h3>
+                    <p>Diario La Prensa también escribió sobre "Dr. House", calificándola como una serie inolvidable y única, 
+                        con guiones excelentes y realizaciones impecables, incluyendo la participación del director argentino Juan José Campanella.</p>
+                    <a href="https://www.laprensa.com.ar/Dr-House-499549.note.aspx" target="_blank">Leer Más</a>
                 </div>
             </div>
-            <div class="reviews">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
+
+            <div class="card">
+                <figure>
+                    <img src="images/principal/tn.jpg" alt="Logo TN">
+                </figure>
+                <div class="contenido-card">
+                    <h3>TN</h3>
+                    <p>TN tiene una nota sobre "Dr. House", describiendo al personaje como el Sherlock Holmes de las enfermedades.
+                        La nota resalta la personalidad cínica y antipática del Dr. House y cómo la serie se diferenciaba de otras series médicas por su enfoque en casos clínicos difíciles</p>
+                    <a href="https://tn.com.ar/show/television/2024/02/04/dr-house-el-medico-cinico-y-antipatico-que-se-convirtio-en-el-sherlock-holmes-de-las-enfermedades/" target="_blank">Leer Más</a>
+                </div>
             </div>
-        </div>
-        <div class="client-comment">
-            <a href="https://www.empireonline.com/tv/reviews/house-season-1-review/" target="_blank" >
-            <p>
-                "Laurie es la razón por la que ver este híbrido de 'CSI' y 'ER' que se hace repetitivo, pero que es siempre cautivador (...)”
-            </p>
-            </a>
-        </div>
-        </div>
-    </div>
-    </article>
-</section>
 
-<section class="sect-principal">
-    <article class="secundario">
-    <div class="card">
-        <figure>
-            <img src="images\principal\laprensa.jpg">
-        </figure>
-        <div class="contenido-card">
-            <h3>La prensa</h3>
-            <p>Diario La Prensa también escribió sobre “Dr. House”, calificándola como una serie inolvidable y única, 
-                con guiones excelentes y realizaciones impecables, incluyendo la participación del director argentino Juan José Campanella.</p>
-            <a href="https://www.laprensa.com.ar/Dr-House-499549.note.aspx" target="_blank">Leer Màs</a>
-        </div>
-    </div>
+            <div class="card">
+                <figure>
+                    <img src="images/principal/LaNacion.jpg" alt="Logo La Nación">
+                </figure>
+                <div class="contenido-card">
+                    <h3>La Nacion</h3>
+                    <p>La Nación publicó un artículo sobre la llegada de "Dr. House" a Netflix, destacando cómo el personaje principal,
+                        interpretado por Hugh Laurie, nació de una traición y por qué el actor se sentía avergonzado.
+                        El artículo también menciona cómo la serie se convirtió en un fenómeno que revolucionó la televisión.</p>
+                    <a href="https://www.lanacion.com.ar/espectaculos/series-de-tv/dr-house-llega-a-netflix-el-personaje-que-nacio-de-una-traicion-y-el-por-que-de-la-verguenza-de-hugh-nid01022024/" target="_blank">Leer Más</a>
+                </div>
+            </div>
+        </article>
+    </section>
 
-    <div class="card">
-        <figure>
-            <img src="images\principal\tn.jpg">
-        </figure>
-        <div class="contenido-card">
-            <h3>TN</h3>
-            <p>TN tiene una nota sobre “Dr. House”, describiendo al personaje como el Sherlock Holmes de las enfermedades.
-                La nota resalta la personalidad cínica y antipática del Dr. House y cómo la serie se diferenciaba de otras series médicas por su enfoque en casos clínicos difíciles</p>
-            <a href="https://tn.com.ar/show/television/2024/02/04/dr-house-el-medico-cinico-y-antipatico-que-se-convirtio-en-el-sherlock-holmes-de-las-enfermedades/" target="_blank">Leer Màs</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <figure>
-            <img src="images\principal\LaNacion.jpg">
-        </figure>
-        <div class="contenido-card">
-            <h3>La Nacion</h3>
-            <p>La Nación publicó un artículo sobre la llegada de “Dr. House” a Netflix, destacando cómo el personaje principal,
-                interpretado por Hugh Laurie, nació de una traición y por qué el actor se sentía avergonzado.
-                El artículo también menciona cómo la serie se convirtió en un fenómeno que revolucionó la televisión.</p>
-            <a href="https://www.lanacion.com.ar/espectaculos/series-de-tv/dr-house-llega-a-netflix-el-personaje-que-nacio-de-una-traicion-y-el-por-que-de-la-verguenza-de-hugh-nid01022024/" target="_blank">Leer Màs</a>
-        </div>
-    </div>
-</article>
-</section>
-
-<a class="arriba" href="#"><i class="fa-solid fa-up-long"></i></a>
+    <a class="arriba" href="#"><i class="fa-solid fa-up-long"></i></a>
 
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">
                 <figure>
                     <a href="#">
-                        <img src="images\principal\logo.png" alt="Logo de la Serie">
+                        <img src="images/principal/logo.png" alt="Logo de la Serie">
                     </a>
                 </figure>
             </div>
             <div class="box">
                 <h2>SOBRE NOSOTROS</h2>
-                <p>Bienvenidos a <strong>Dr.House Hub</strong> , es un sitio web <strong>no oficial</strong>, hecha por un fan para fans.
-                Este sitio comparte contenido exclusivo sobre la serie, datos sobre la serie tanto dentro como fuera de la serie. </p>
-                <p>Únete a nuestra comunidad y descubre por qué Dr. House sigue siendo una referencia en la televisión mundial. </p>
+                <p>
+                    Bienvenidos a <strong>Dr.House Hub</strong>, es un sitio web <strong>no oficial</strong>, hecha por un fan para fans.
+                    Este sitio comparte contenido exclusivo sobre la serie, datos sobre la serie tanto dentro como fuera de la serie.
+                </p>
+                <p>Únete a nuestra comunidad y descubre por qué Dr. House sigue siendo una referencia en la televisión mundial.</p>
             </div>
             <div class="box">
                 <h2>SIGUENOS</h2>
                 <div class="red-social">
-                    <a href="https://www.facebook.com/?locale=es_LA" class="fa fa-facebook"></a>
-                    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
-                    <a href="https://twitter.com/?lang=es" class="fa fa-twitter"></a>
-                    <a href="https://www.youtube.com/?hl=es-419&gl=AR" class="fa fa-youtube"></a>
+                    <a href="https://www.facebook.com/?locale=es_LA" class="fa fa-facebook" aria-label="Facebook"></a>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram" aria-label="Instagram"></a>
+                    <a href="https://twitter.com/?lang=es" class="fa fa-twitter" aria-label="Twitter"></a>
+                    <a href="https://www.youtube.com/?hl=es-419&gl=AR" class="fa fa-youtube" aria-label="YouTube"></a>
                 </div>
             </div>
         </div>
@@ -293,9 +279,6 @@
         </div>
     </footer>
 
-
-
-
-
+    <script src="js/main.js"></script>
 </body>
 </html>
