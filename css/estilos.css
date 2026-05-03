@@ -2102,3 +2102,138 @@ form .campo, form textarea {
     display: flex;
     gap: 3px;
 }
+
+/*---------------GALERÍA DE IMÁGENES Y LIGHTBOX---------------*/
+.grid-galeria {
+    display: grid;
+    /* Cuadrícula automática: se adapta a celulares y PC sin Media Queries extra */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.img-galeria {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer; /* Cambia el cursor a una manito para indicar que es clickeable */
+    filter: grayscale(20%);
+    transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+.img-galeria:hover {
+    transform: scale(1.03);
+    filter: grayscale(0%);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 2;
+    position: relative;
+}
+
+/* --- EL MODAL (LIGHTBOX) --- */
+.lightbox {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 9999; /* Por encima de todo en la página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 26, 42, 0.95); /* Azul oscuro casi negro */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.activo {
+    display: flex; /* Se muestra cuando tiene la clase activo */
+    opacity: 1;
+}
+
+/* Modificamos el contenedor para que apile la foto y el texto */
+.lightbox-contenido {
+    width: 90%;
+    max-width: 1200px;
+    height: 85vh; 
+    display: flex;
+    flex-direction: column; /* Apila los elementos en vertical */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Le bajamos un poco la altura máxima a la foto para hacerle buen lugar al texto */
+.lightbox-contenido img {
+    max-width: 100%;
+    max-height: 70vh; /* Antes era calc(100% - 50px), ahora ocupa máximo el 70% de la pantalla */
+    width: auto;
+    height: auto;
+    object-fit: contain; 
+    border: 2px solid #2FB4CC;
+    border-radius: 4px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+/* Ajustes para que el texto sea a prueba de desbordes */
+.descripcion-lightbox {
+    color: #eeeeee;
+    font-size: 16px; /* Bajamos un puntito el tamaño para que entre mejor */
+    margin-top: 15px;
+    margin-bottom: 0;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    max-width: 85%; 
+    max-height: 12vh; /* Altura máxima estricta para el bloque de texto */
+    overflow-y: auto; /* ¡La magia! Si el texto es muy largo, se podrá scrollear solo el texto */
+    padding: 0 15px;
+}
+
+/* (Opcional) Le damos un estilo moderno y finito a esa barrita de scroll del texto */
+.descripcion-lightbox::-webkit-scrollbar {
+    width: 6px;
+}
+.descripcion-lightbox::-webkit-scrollbar-thumb {
+    background-color: #2FB4CC;
+    border-radius: 4px;
+}
+/* Botones del Lightbox */
+.cerrar-lightbox {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.cerrar-lightbox:hover {
+    color: #E67E22;
+}
+
+.btn-lightbox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-lightbox:hover {
+    background: #2FB4CC;
+    color: #0A1A2A;
+}
+
+.btn-lightbox.prev {
+    left: 20px;
+}
+
+.btn-lightbox.next {
+    right: 20px;
+}

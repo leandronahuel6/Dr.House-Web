@@ -23,3 +23,73 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(el);
     });
 });
+
+// ==========================================
+// LÓGICA DEL LIGHTBOX (Galería de Imágenes)
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+    const imagenesGaleria = document.querySelectorAll('.img-galeria');
+    const lightbox = document.getElementById('lightbox');
+    
+    // Si estamos en una página que no tiene galería, detenemos el script aquí
+    if (!lightbox) return; 
+
+    const imgLightbox = document.getElementById('img-lightbox');
+    const txtLightbox = document.getElementById('texto-lightbox'); // Variable del texto
+    const btnCerrar = document.querySelector('.cerrar-lightbox');
+    const btnPrev = document.querySelector('.btn-lightbox.prev');
+    const btnNext = document.querySelector('.btn-lightbox.next');
+
+    let indiceActual = 0;
+
+    // 1. Abrir la imagen
+    imagenesGaleria.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            indiceActual = index;
+            mostrarImagen(indiceActual);
+            lightbox.classList.add('activo');
+        });
+    });
+
+    // Función unificada para foto y texto
+    function mostrarImagen(indice) {
+        const imagenSeleccionada = imagenesGaleria[indice];
+        imgLightbox.src = imagenSeleccionada.src;
+        
+        const descripcion = imagenSeleccionada.getAttribute('data-descripcion') || imagenSeleccionada.alt || '';
+        txtLightbox.textContent = descripcion;
+    }
+
+    // 2. Botón Siguiente
+    btnNext.addEventListener('click', () => {
+        indiceActual = (indiceActual + 1) % imagenesGaleria.length;
+        mostrarImagen(indiceActual);
+    });
+
+    // 3. Botón Anterior
+    btnPrev.addEventListener('click', () => {
+        indiceActual = (indiceActual - 1 + imagenesGaleria.length) % imagenesGaleria.length;
+        mostrarImagen(indiceActual);
+    });
+
+    // 4. Cerrar con la X
+    btnCerrar.addEventListener('click', () => {
+        lightbox.classList.remove('activo');
+    });
+
+    // 5. Cerrar al hacer clic afuera
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('activo');
+        }
+    });
+
+    // 6. Teclado
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('activo')) {
+            if (e.key === 'Escape') lightbox.classList.remove('activo');
+            if (e.key === 'ArrowRight') btnNext.click();
+            if (e.key === 'ArrowLeft') btnPrev.click();
+        }
+    });
+});
