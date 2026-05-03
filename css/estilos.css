@@ -1312,6 +1312,121 @@ hr{
     letter-spacing: 0.5px;
 }
 
+/*---------------ANÉCDOTAS (Archivos Confidenciales)---------------*/
+.contenedor-anecdotas {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 20px 0;
+}
+
+.tarjeta-anecdota {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 40px;
+    align-items: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tarjeta-anecdota:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(10,26,42,0.1);
+}
+
+/* Estilo de "Fotografía de Evidencia" para las imágenes */
+.imagen-evidencia {
+    position: relative;
+    padding: 10px 10px 40px 10px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transform: rotate(-2deg); /* Gira la foto ligeramente */
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-anecdota:hover .imagen-evidencia {
+    transform: rotate(0deg) scale(1.02); /* Se endereza al pasar el mouse */
+}
+
+.imagen-evidencia img {
+    width: 100%;
+    height: auto; /* Deja que la imagen crezca lo necesario para verse completa */
+    max-height: 350px; /* Le ponemos un tope para que una foto gigante no rompa la tarjeta */
+    object-fit: contain; /* Si llega al tope, se encaja sin recortarse */
+    background-color: #f4f4f4; /* Un fondo gris muy sutil por si quedan espacios vacíos */
+    filter: sepia(30%) contrast(110%); /* Toque vintage/documental */
+}
+
+/* Un clip simulado con CSS para sujetar la foto */
+.imagen-evidencia::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.texto-anecdota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto-anecdota h3 {
+    color: #0A1A2A;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #2FB4CC;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Zig-Zag para las anécdotas pares */
+.tarjeta-anecdota:nth-child(even) {
+    grid-template-columns: 1fr 400px;
+}
+
+.tarjeta-anecdota:nth-child(even) .imagen-evidencia {
+    order: 2;
+    transform: rotate(2deg); /* Gira hacia el otro lado */
+}
+
+.tarjeta-anecdota:nth-child(even):hover .imagen-evidencia {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.tarjeta-anecdota:nth-child(even) .texto-anecdota {
+    order: 1;
+}
+
+/* Ajuste para móviles (Añadir dentro de tu @media(max-width: 768px)) */
+@media(max-width: 768px) {
+    .tarjeta-anecdota,
+    .tarjeta-anecdota:nth-child(even) {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+    }
+    .tarjeta-anecdota:nth-child(even) .imagen-evidencia {
+        order: 1;
+    }
+    .tarjeta-anecdota:nth-child(even) .texto-anecdota {
+        order: 2;
+    }
+}
+
 @media(max-width: 480px) { 
 
 #menu-bar {
